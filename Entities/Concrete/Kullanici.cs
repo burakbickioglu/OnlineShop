@@ -1,5 +1,6 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using Entities.Abstract;
 
@@ -7,6 +8,7 @@ namespace Entities.Concrete
 {
     public class Kullanici : IEntity
     {
+        [Key]
         public int KullaniciId { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }

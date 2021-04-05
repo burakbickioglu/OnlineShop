@@ -16,14 +16,14 @@ namespace Business.Concrete
             _kullaniciDal = kullaniciDal;
         }
 
-        public bool Add(Kullanici kullanici)
+        public bool Add(Kullanici entity)
         {
-            return _kullaniciDal.Add(kullanici);
+            return _kullaniciDal.Add(entity);
         }
 
-        public bool Delete(Kullanici kullanici)
+        public bool Delete(Kullanici entity)
         {
-            return _kullaniciDal.Delete(kullanici);
+            return _kullaniciDal.Delete(entity);
 
         }
 
@@ -38,9 +38,9 @@ namespace Business.Concrete
 
         }
 
-        public bool Update(Kullanici alimSatim)
+        public bool Update(Kullanici entity)
         {
-            return _kullaniciDal.Update(alimSatim);
+            return _kullaniciDal.Update(entity);
         }
     }
 }

@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Entities.Concrete;
 
-namespace Business.Abstract
+namespace DataAccess.Abstract
 {
-    public interface IKullaniciService: IBaseService<Kullanici>
+    public interface IUrunDal : IEntityRepository<Urun>
     {
-        
     }
 }

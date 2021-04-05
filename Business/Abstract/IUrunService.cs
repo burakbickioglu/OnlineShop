@@ -5,8 +5,7 @@ using Entities.Concrete;
 
 namespace Business.Abstract
 {
-    public interface IKullaniciService: IBaseService<Kullanici>
+    public interface IUrunService : IBaseService<Urun>
     {
-        
     }
 }
