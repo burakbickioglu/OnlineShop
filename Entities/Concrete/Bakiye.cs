@@ -9,10 +9,10 @@ namespace Entities.Concrete
     public class Bakiye : IEntity
     {
         [Key]
-        public int KullaniciId { get; set; }
-        public decimal MevcutBakiye { get; set; }
-        public decimal EklenecekBakiye { get; set; }
-        public bool BakiyeOnay { get; set; }
+        public int? KullaniciId { get; set; }
+        public decimal? MevcutBakiye { get; set; }
+        public decimal? EklenecekBakiye { get; set; }
+        public bool? BakiyeOnay { get; set; }
 
     }
 }

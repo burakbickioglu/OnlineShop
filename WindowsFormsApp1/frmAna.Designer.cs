@@ -43,6 +43,7 @@ namespace WindowsFormsApp1
             this.btnKullaniciGiris.TabIndex = 0;
             this.btnKullaniciGiris.Text = "Kullanıcı Girişi";
             this.btnKullaniciGiris.UseVisualStyleBackColor = true;
+            this.btnKullaniciGiris.Click += new System.EventHandler(this.btnKullaniciGiris_Click);
             // 
             // btnAdminGiris
             // 
@@ -75,8 +76,11 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnAdminGiris);
             this.Controls.Add(this.btnKullaniciGiris);
             this.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAna";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Online Shopping";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

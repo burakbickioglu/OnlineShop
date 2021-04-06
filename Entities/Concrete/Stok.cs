@@ -9,11 +9,11 @@ namespace Entities.Concrete
     public class Stok : IEntity
     {
         [Key]
-        public int StokKod { get; set; }
-        public int KullaniciId { get; set; }
-        public int UrunId { get; set; }
-        public int UrunMiktar { get; set; }
-        public bool UrunOnay { get; set; }
+        public int? StokKod { get; set; }    
+        public int? KullaniciId { get; set; }
+        public int? UrunId { get; set; }
+        public int? UrunMiktar { get; set; }
+        public bool? UrunOnay { get; set; }
 
     }
 }

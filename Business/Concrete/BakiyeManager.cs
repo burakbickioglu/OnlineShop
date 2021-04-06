@@ -41,5 +41,7 @@ namespace Business.Concrete
         {
             return _bakiyeDal.Delete(entity);
         }
+
+        
     }
 }

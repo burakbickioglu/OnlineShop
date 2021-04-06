@@ -11,6 +11,7 @@ namespace Business.Concrete
     {
         IKullaniciDal _kullaniciDal;
 
+
         public KullaniciManager(IKullaniciDal kullaniciDal)
         {
             _kullaniciDal = kullaniciDal;
@@ -18,6 +19,7 @@ namespace Business.Concrete
 
         public bool Add(Kullanici entity)
         {
+
             return _kullaniciDal.Add(entity);
         }
 
@@ -25,6 +27,17 @@ namespace Business.Concrete
         {
             return _kullaniciDal.Delete(entity);
 
+        }
+
+        public Kullanici UserControl(string kullaniciad, string sifre)
+        {
+            return _kullaniciDal.Get(p => p.KullaniciAd == kullaniciad && p.KullaniciSifre == sifre);
+        }
+
+        public Kullanici Get(Kullanici kullanici)
+        {
+            return _kullaniciDal.Get(p => p.KullaniciAd == kullanici.KullaniciAd);
+            
         }
 
         public List<Kullanici> GetAll()

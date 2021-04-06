@@ -156,8 +156,12 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmUyeOl";
-            this.Text = " ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Üye Ol";
+            this.Load += new System.EventHandler(this.frmUyeOl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

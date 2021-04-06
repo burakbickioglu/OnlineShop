@@ -31,5 +31,11 @@ namespace WindowsFormsApp1
             frmUyeOl uyeOl = new frmUyeOl();
             uyeOl.Show();
         }
+
+        private void btnKullaniciGiris_Click(object sender, EventArgs e)
+        {
+            frmKullaniciGiris girisYap = new frmKullaniciGiris();
+            girisYap.Show();
+        }
     }
 }
