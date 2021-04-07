@@ -19,7 +19,7 @@ namespace DataAccess.Concrete
             {
                 var result = from k in context.tblKullanici
                     join s in context.tblStok on k.KullaniciId equals s.KullaniciId
-                    join u in context.tblUrun on s.UrunId equals u.UrunId where s.KullaniciId == kullanici.KullaniciId
+                    join u in context.tblUrun on s.UrunId equals u.UrunId where s.KullaniciId == kullanici.KullaniciId && s.UrunOnay==true
                     select new UserStockDto
                     {
                         KullaniciId = s.KullaniciId,

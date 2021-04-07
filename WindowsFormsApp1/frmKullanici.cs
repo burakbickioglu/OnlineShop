@@ -99,6 +99,7 @@ namespace WindowsFormsApp1
             ilan.BirimFiyat = Convert.ToInt16(txtBirimFiyat.Text);
             ilan.SaticiId = _kullanici.KullaniciId;
             ilan.Durum = false;
+            
 
             Stok temp = stokManager.GetAll()
                 .FirstOrDefault(p => p.KullaniciId == _kullanici.KullaniciId && p.UrunId == ilan.UrunId);
@@ -117,6 +118,7 @@ namespace WindowsFormsApp1
             }
             
             datagridList();
+            
             
 
         }
