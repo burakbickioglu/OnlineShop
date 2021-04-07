@@ -30,16 +30,17 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.grpKullaniciBilgileri = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.lblTc = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnBakiyeEkle = new System.Windows.Forms.Button();
             this.lblBakiye = new System.Windows.Forms.Label();
             this.lblAdSoyad = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAlis = new System.Windows.Forms.Button();
@@ -65,11 +66,11 @@ namespace WindowsFormsApp1
             // 
             // grpKullaniciBilgileri
             // 
+            this.grpKullaniciBilgileri.Controls.Add(this.button2);
             this.grpKullaniciBilgileri.Controls.Add(this.lblTc);
             this.grpKullaniciBilgileri.Controls.Add(this.label5);
             this.grpKullaniciBilgileri.Controls.Add(this.lblTel);
             this.grpKullaniciBilgileri.Controls.Add(this.label4);
-            this.grpKullaniciBilgileri.Controls.Add(this.btnBakiyeEkle);
             this.grpKullaniciBilgileri.Controls.Add(this.lblBakiye);
             this.grpKullaniciBilgileri.Controls.Add(this.lblAdSoyad);
             this.grpKullaniciBilgileri.Controls.Add(this.label2);
@@ -80,6 +81,16 @@ namespace WindowsFormsApp1
             this.grpKullaniciBilgileri.TabIndex = 0;
             this.grpKullaniciBilgileri.TabStop = false;
             this.grpKullaniciBilgileri.Text = "Kullanıcı Bilgileri";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(24, 169);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 29);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Bakiye Ekle";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // lblTc
             // 
@@ -117,20 +128,10 @@ namespace WindowsFormsApp1
             this.label4.TabIndex = 5;
             this.label4.Text = "Telefon: ";
             // 
-            // btnBakiyeEkle
-            // 
-            this.btnBakiyeEkle.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnBakiyeEkle.Location = new System.Drawing.Point(179, 180);
-            this.btnBakiyeEkle.Name = "btnBakiyeEkle";
-            this.btnBakiyeEkle.Size = new System.Drawing.Size(39, 40);
-            this.btnBakiyeEkle.TabIndex = 4;
-            this.btnBakiyeEkle.Text = "+";
-            this.btnBakiyeEkle.UseVisualStyleBackColor = true;
-            // 
             // lblBakiye
             // 
             this.lblBakiye.AutoSize = true;
-            this.lblBakiye.Location = new System.Drawing.Point(73, 187);
+            this.lblBakiye.Location = new System.Drawing.Point(98, 141);
             this.lblBakiye.Name = "lblBakiye";
             this.lblBakiye.Size = new System.Drawing.Size(30, 25);
             this.lblBakiye.TabIndex = 3;
@@ -148,7 +149,7 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 187);
+            this.label2.Location = new System.Drawing.Point(24, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 1;
@@ -165,23 +166,33 @@ namespace WindowsFormsApp1
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Location = new System.Drawing.Point(12, 243);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(778, 225);
+            this.groupBox1.Size = new System.Drawing.Size(778, 358);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stoktaki Ürünleriniz";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(613, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 29);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Ürün Ekle";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 57);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(772, 193);
+            this.dataGridView1.Size = new System.Drawing.Size(772, 298);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox2
@@ -294,12 +305,14 @@ namespace WindowsFormsApp1
             // btnSatis
             // 
             this.btnSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSatis.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSatis.Location = new System.Drawing.Point(84, 175);
             this.btnSatis.Name = "btnSatis";
             this.btnSatis.Size = new System.Drawing.Size(133, 37);
             this.btnSatis.TabIndex = 8;
             this.btnSatis.Text = "Satış Emri";
             this.btnSatis.UseVisualStyleBackColor = true;
+            this.btnSatis.Click += new System.EventHandler(this.btnSatis_Click);
             // 
             // cmbSatilacakUrun
             // 
@@ -342,7 +355,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 476);
+            this.ClientSize = new System.Drawing.Size(800, 613);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -378,7 +391,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnBakiyeEkle;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -396,5 +408,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txtSatilacakMiktar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

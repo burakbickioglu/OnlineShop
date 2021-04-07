@@ -24,13 +24,16 @@ namespace WindowsFormsApp1
         }
 
         Bakiye _bakiye = new Bakiye();
-        BakiyeManager bakiyeManager = new BakiyeManager(new EfBakiyeDal());
         List<Urun> _uruns = new List<Urun>();
-        UrunManager urunManager = new UrunManager(new EfUrunDal());
-        AlisEmir alisEmir = new AlisEmir();
-        AlisEmirManager alisManager = new AlisEmirManager(new EfAlisEmirDal());
         List<UserStockDto> _stok = new List<UserStockDto>();
+        List<Stok> _userStok = new List<Stok>();
+        int stokkod;
+
+        BakiyeManager bakiyeManager = new BakiyeManager(new EfBakiyeDal());
+        UrunManager urunManager = new UrunManager(new EfUrunDal());
+        AlisEmirManager alisManager = new AlisEmirManager(new EfAlisEmirDal());
         StokManager stokManager = new StokManager(new EfStokDal());
+        IlanManager ilanManager = new IlanManager(new EfIlanDal());
 
 
         private void frmKullanici_Load(object sender, EventArgs e)
@@ -38,13 +41,13 @@ namespace WindowsFormsApp1
             _bakiye.KullaniciId = _kullanici.KullaniciId;
             _bakiye = bakiyeManager.Get(_bakiye);
             lblAdSoyad.Text = _kullanici.Ad + " " + _kullanici.Soyad;
-            
-            lblBakiye.Text = Math.Round(Convert.ToDecimal(_bakiye.MevcutBakiye),2) + " TL";
+
+            lblBakiye.Text = Math.Round(Convert.ToDecimal(_bakiye.MevcutBakiye), 2) + " TL";
             lblTc.Text = _kullanici.TcNo;
             lblTel.Text = _kullanici.TelNo;
 
 
-            
+            //alınacak ürün doldurma
             _uruns = urunManager.GetAll();
             foreach (var urun in _uruns)
             {
@@ -52,18 +55,28 @@ namespace WindowsFormsApp1
             }
 
 
-            _stok = stokManager.GetUserStockDetail(_kullanici);
-            
-            dataGridView1.DataSource = _stok;
+            // datagrid doldurma
+            datagridList();
 
+            // satılabilecek ürünleri listeleme
+            foreach (var stok in _stok)
+            {
+                if (Convert.ToBoolean(stok.UrunOnay))
+                {
+                    cmbSatilacakUrun.Items.Add(stok.UrunAd);
+
+                }
+            }
 
 
         }
 
         private void btnAlis_Click(object sender, EventArgs e)
         {
+
+            AlisEmir alisEmir = new AlisEmir();
             alisEmir.AliciId = _kullanici.KullaniciId;
-            alisEmir.UrunId = urunManager.Get(new Urun {UrunAd = cmbAlinacakUrun.Text}).UrunId;
+            alisEmir.UrunId = urunManager.Get(new Urun { UrunAd = cmbAlinacakUrun.Text }).UrunId;
             alisEmir.Miktar = Convert.ToInt16(txtAlinacakMiktar.Text);
             alisEmir.Durum = false;
             var result = alisManager.Add(alisEmir);
@@ -77,5 +90,46 @@ namespace WindowsFormsApp1
             }
 
         }
+
+        private void btnSatis_Click(object sender, EventArgs e)
+        {
+            Ilan ilan = new Ilan();
+            ilan.UrunId = urunManager.Get(new Urun { UrunAd = cmbSatilacakUrun.Text }).UrunId;
+            ilan.Miktar = Convert.ToInt16(txtSatilacakMiktar.Text);
+            ilan.BirimFiyat = Convert.ToInt16(txtBirimFiyat.Text);
+            ilan.SaticiId = _kullanici.KullaniciId;
+            ilan.Durum = false;
+
+            Stok temp = stokManager.GetAll()
+                .FirstOrDefault(p => p.KullaniciId == _kullanici.KullaniciId && p.UrunId == ilan.UrunId);
+
+            if (temp.UrunMiktar >= ilan.Miktar)
+            {
+                temp.UrunMiktar -= ilan.Miktar;
+                var result2 = stokManager.Update(temp);
+                var result = ilanManager.Add(ilan);
+                MessageBox.Show("Satış emri verildi!");
+            }
+
+            else
+            {
+                MessageBox.Show("Ürün yetersiz");
+            }
+            
+            datagridList();
+            
+
+        }
+
+        public void datagridList()
+        {
+            _stok = stokManager.GetUserStockDetail(_kullanici);
+            dataGridView1.DataSource = _stok;
+
+            _userStok = stokManager.GetAll().Where(p => p.KullaniciId == _kullanici.KullaniciId).ToList();
+        }
+
+
+
     }
 }
