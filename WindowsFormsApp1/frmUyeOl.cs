@@ -33,12 +33,14 @@ namespace WindowsFormsApp1
             kullanici.TelNo = txtTel.Text;
             kullanici.KullaniciAd = txtKullaniciAd.Text;
             kullanici.KullaniciSifre = txtSifre.Text;
+            kullanici.TcNo = txtTcNo.Text;
+            kullanici.eMail = txtEmail.Text;
+            kullanici.Adres = rchAdres.Text;
             var result = kullaniciManager.Add(kullanici);
             bakiye.KullaniciId = kullaniciManager.Get(kullanici).KullaniciId;
             bakiye.MevcutBakiye = 0;
             var result2 = bakiyeManager.Add(bakiye);
-                
-
+            
             if (result)
             {
                 MessageBox.Show("Kayıt Tamamlandı");

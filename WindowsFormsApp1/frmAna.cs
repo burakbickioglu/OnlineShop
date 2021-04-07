@@ -29,13 +29,13 @@ namespace WindowsFormsApp1
         private void btnUyeOl_Click(object sender, EventArgs e)
         {
             frmUyeOl uyeOl = new frmUyeOl();
-            uyeOl.Show();
+            uyeOl.ShowDialog();
         }
 
         private void btnKullaniciGiris_Click(object sender, EventArgs e)
         {
             frmKullaniciGiris girisYap = new frmKullaniciGiris();
-            girisYap.Show();
+            girisYap.ShowDialog();
         }
     }
 }

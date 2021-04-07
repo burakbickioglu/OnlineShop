@@ -67,6 +67,7 @@ namespace WindowsFormsApp1
             this.txtKullaniciSifre.Name = "txtKullaniciSifre";
             this.txtKullaniciSifre.Size = new System.Drawing.Size(166, 33);
             this.txtKullaniciSifre.TabIndex = 2;
+            this.txtKullaniciSifre.UseSystemPasswordChar = true;
             // 
             // btnGiris
             // 

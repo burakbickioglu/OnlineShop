@@ -13,6 +13,9 @@ namespace Entities.Concrete
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public string TelNo { get; set; }
+        public string Adres { get; set; }
+        public string eMail { get; set; }
+        public string TcNo { get; set; }
         public string KullaniciAd { get; set; }
         public string KullaniciSifre { get; set; }
 

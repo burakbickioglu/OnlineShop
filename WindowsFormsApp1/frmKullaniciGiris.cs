@@ -30,8 +30,16 @@ namespace WindowsFormsApp1
             string sifre = txtKullaniciSifre.Text;
             kullanici = kullaniciManager.UserControl(ad, sifre);
             frmKullanici frmKullanici = new frmKullanici(kullanici);
+            if (kullanici == null)
+            {
+                MessageBox.Show("Kullanıcı adı veya şifre yanlış");
+            }
+            else 
+            {
+                frmKullanici.ShowDialog();
+            }
+            
 
-            frmKullanici.Show();
 
 
         }
