@@ -10,6 +10,7 @@ using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Concrete;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace WindowsFormsApp1
 {
@@ -28,6 +29,10 @@ namespace WindowsFormsApp1
         UrunManager urunManager = new UrunManager(new EfUrunDal());
         AlisEmir alisEmir = new AlisEmir();
         AlisEmirManager alisManager = new AlisEmirManager(new EfAlisEmirDal());
+        List<UserStockDto> _stok = new List<UserStockDto>();
+        StokManager stokManager = new StokManager(new EfStokDal());
+
+
         private void frmKullanici_Load(object sender, EventArgs e)
         {
             _bakiye.KullaniciId = _kullanici.KullaniciId;
@@ -45,7 +50,13 @@ namespace WindowsFormsApp1
             {
                 cmbAlinacakUrun.Items.Add(urun.UrunAd);
             }
+
+
+            _stok = stokManager.GetUserStockDetail(_kullanici);
             
+            dataGridView1.DataSource = _stok;
+
+
 
         }
 

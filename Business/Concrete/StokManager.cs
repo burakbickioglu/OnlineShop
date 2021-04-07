@@ -4,6 +4,7 @@ using System.Text;
 using Business.Abstract;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Business.Concrete
 {
@@ -22,7 +23,7 @@ namespace Business.Concrete
 
         public Stok Get(Stok entity)
         {
-            return _stokDal.Get(p => p.KullaniciId == entity.KullaniciId);
+            return _stokDal.Get(p => p.KullaniciId == entity.KullaniciId );
 
         }
 
@@ -39,6 +40,11 @@ namespace Business.Concrete
         public bool Delete(Stok entity)
         {
             return _stokDal.Delete(entity);
+        }
+
+        public List<UserStockDto> GetUserStockDetail(Kullanici kullanici)
+        {
+            return _stokDal.GetUserStockDetail(kullanici);
         }
     }
 }
