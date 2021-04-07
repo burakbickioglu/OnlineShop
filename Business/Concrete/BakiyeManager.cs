@@ -22,9 +22,9 @@ namespace Business.Concrete
             return _bakiyeDal.GetAll();
         }
 
-        public Bakiye GetById(int id)
+        public Bakiye Get(Bakiye entity)
         {
-            return _bakiyeDal.Get(p => p.KullaniciId == id);
+            return _bakiyeDal.Get(p => p.KullaniciId == entity.KullaniciId);
         }
 
         public bool Add(Bakiye entity)

@@ -21,11 +21,11 @@ namespace Business.Concrete
             return _alimSatim.GetAll();
         }
 
-        public AlimSatim GetById(int id)
+        public AlimSatim Get(AlimSatim entity)
         {
-            return _alimSatim.Get(p => p.IslemId == id);
+            return _alimSatim.Get(p => p.IslemId == entity.IslemId);
         }
-
+        
         public bool Add(AlimSatim entity)
         {
             return _alimSatim.Add(entity);

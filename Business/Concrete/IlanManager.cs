@@ -21,9 +21,9 @@ namespace Business.Concrete
             return _IlanDal.GetAll();
         }
 
-        public Ilan GetById(int id)
+        public Ilan Get(Ilan entity)
         {
-            return _IlanDal.Get(p => p.IlanId == id);
+            return _IlanDal.Get(p => p.IlanId == entity.IlanId);
         }
 
         public bool Add(Ilan entity)

@@ -21,9 +21,9 @@ namespace Business.Concrete
             return _alisEmirDal.GetAll();
         }
 
-        public AlisEmir GetById(int id)
+        public AlisEmir Get(AlisEmir entity)
         {
-            return _alisEmirDal.Get(p => p.EmirId == id);
+            return _alisEmirDal.Get(p => p.AliciId == entity.AliciId);
         }
 
         public bool Add(AlisEmir entity)

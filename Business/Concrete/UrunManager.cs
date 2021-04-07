@@ -21,9 +21,9 @@ namespace Business.Concrete
             return _urunDal.GetAll();
         }
 
-        public Urun GetById(int id)
+        public Urun Get(Urun entity)
         {
-            return _urunDal.Get(p => p.UrunId == id);
+            return _urunDal.Get(p => p.UrunAd == entity.UrunAd);
         }
 
         public bool Add(Urun entity)

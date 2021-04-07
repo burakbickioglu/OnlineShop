@@ -20,9 +20,9 @@ namespace Business.Concrete
             return _stokDal.GetAll();
         }
 
-        public Stok GetById(int id)
+        public Stok Get(Stok entity)
         {
-            return _stokDal.Get(p => p.StokKod == id);
+            return _stokDal.Get(p => p.KullaniciId == entity.KullaniciId);
 
         }
 

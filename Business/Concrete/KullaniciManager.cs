@@ -45,11 +45,7 @@ namespace Business.Concrete
             return _kullaniciDal.GetAll();
         }
 
-        public Kullanici GetById(int id)
-        {
-            return _kullaniciDal.Get(p => p.KullaniciId == id);
-
-        }
+        
 
         public bool Update(Kullanici entity)
         {
