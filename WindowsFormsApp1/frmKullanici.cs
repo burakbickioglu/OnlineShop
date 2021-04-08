@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         List<Urun> _uruns = new List<Urun>();
         List<UserStockDto> _stok = new List<UserStockDto>();
         List<Stok> _userStok = new List<Stok>();
-        int stokkod;
+        
 
         BakiyeManager bakiyeManager = new BakiyeManager(new EfBakiyeDal());
         UrunManager urunManager = new UrunManager(new EfUrunDal());
@@ -47,27 +47,39 @@ namespace WindowsFormsApp1
             lblTel.Text = _kullanici.TelNo;
 
 
+            datagridList();
+
+            alinacakUrunDoldur();
+            satilacakUrunDoldur();
+
+            // datagrid doldurma
+
+            
+        }
+
+        void alinacakUrunDoldur()
+        {
             //alınacak ürün doldurma
+
             _uruns = urunManager.GetAll();
             foreach (var urun in _uruns)
             {
                 cmbAlinacakUrun.Items.Add(urun.UrunAd);
             }
+        }
 
 
-            // datagrid doldurma
-            datagridList();
-
+        void satilacakUrunDoldur()
+        {
             // satılabilecek ürünleri listeleme
+
             foreach (var stok in _stok)
             {
                 if (Convert.ToBoolean(stok.UrunOnay))
                 {
                     cmbSatilacakUrun.Items.Add(stok.UrunAd);
-
                 }
             }
-
 
         }
 
@@ -88,6 +100,8 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Emir verilemedi");
             }
+
+            satilacakUrunDoldur();
 
         }
 
@@ -119,7 +133,6 @@ namespace WindowsFormsApp1
             
             datagridList();
             
-            
 
         }
 
@@ -131,7 +144,18 @@ namespace WindowsFormsApp1
             _userStok = stokManager.GetAll().Where(p => p.KullaniciId == _kullanici.KullaniciId).ToList();
         }
 
+        private void btnUrunEkle_Click(object sender, EventArgs e)
+        {
+            frmStokEkle fr = new frmStokEkle(_kullanici);
+            fr.ShowDialog();
+            datagridList();
+        }
 
 
+        private void btnDataGridYenile_Click(object sender, EventArgs e)
+        {
+            datagridList();
+            
+        }
     }
 }

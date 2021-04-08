@@ -40,7 +40,8 @@ namespace WindowsFormsApp1
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDataGridYenile = new System.Windows.Forms.Button();
+            this.btnUrunEkle = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAlis = new System.Windows.Forms.Button();
@@ -166,7 +167,8 @@ namespace WindowsFormsApp1
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnDataGridYenile);
+            this.groupBox1.Controls.Add(this.btnUrunEkle);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Location = new System.Drawing.Point(12, 243);
             this.groupBox1.Name = "groupBox1";
@@ -175,15 +177,27 @@ namespace WindowsFormsApp1
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stoktaki Ürünleriniz";
             // 
-            // button1
+            // btnDataGridYenile
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(613, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Ürün Ekle";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDataGridYenile.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDataGridYenile.Location = new System.Drawing.Point(6, 28);
+            this.btnDataGridYenile.Name = "btnDataGridYenile";
+            this.btnDataGridYenile.Size = new System.Drawing.Size(75, 23);
+            this.btnDataGridYenile.TabIndex = 2;
+            this.btnDataGridYenile.Text = "Yenile";
+            this.btnDataGridYenile.UseVisualStyleBackColor = true;
+            this.btnDataGridYenile.Click += new System.EventHandler(this.btnDataGridYenile_Click);
+            // 
+            // btnUrunEkle
+            // 
+            this.btnUrunEkle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUrunEkle.Location = new System.Drawing.Point(613, 22);
+            this.btnUrunEkle.Name = "btnUrunEkle";
+            this.btnUrunEkle.Size = new System.Drawing.Size(159, 29);
+            this.btnUrunEkle.TabIndex = 1;
+            this.btnUrunEkle.Text = "Ürün Ekle";
+            this.btnUrunEkle.UseVisualStyleBackColor = true;
+            this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
             // dataGridView1
             // 
@@ -409,6 +423,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUrunEkle;
+        private System.Windows.Forms.Button btnDataGridYenile;
     }
 }
