@@ -45,8 +45,7 @@ namespace WindowsFormsApp1
             lblBakiye.Text = Math.Round(Convert.ToDecimal(_bakiye.MevcutBakiye), 2) + " TL";
             lblTc.Text = _kullanici.TcNo;
             lblTel.Text = _kullanici.TelNo;
-
-
+            
             datagridList();
 
             alinacakUrunDoldur();
@@ -163,5 +162,7 @@ namespace WindowsFormsApp1
             frmBakiyeEkle fr = new frmBakiyeEkle(_bakiye,bakiyeManager);
             fr.ShowDialog();
         }
+
+        
     }
 }

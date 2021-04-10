@@ -382,6 +382,7 @@ namespace WindowsFormsApp1
             this.Name = "frmKullanici";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Formu";
+            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmKullanici_FormClosed);
             this.Load += new System.EventHandler(this.frmKullanici_Load);
             this.grpKullaniciBilgileri.ResumeLayout(false);
             this.grpKullaniciBilgileri.PerformLayout();

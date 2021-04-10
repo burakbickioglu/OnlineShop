@@ -26,26 +26,36 @@ namespace WindowsFormsApp1
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
+
             string ad = txtKullaniciAd.Text;
             string sifre = txtKullaniciSifre.Text;
-            if (ad == "admin" && sifre == "1234")
-            {
-                frmAdmin fr = new frmAdmin();
-                fr.ShowDialog();
-            }
 
 
             kullanici = kullaniciManager.UserControl(ad, sifre);
             frmKullanici frmKullanici = new frmKullanici(kullanici);
-            if (kullanici == null)
+
+
+            if (ad == "admin" && sifre == "1234")
+            {
+
+                frmAdmin fr = new frmAdmin();
+                fr.ShowDialog();
+            }
+            else if (kullanici == null)
             {
                 MessageBox.Show("Kullanıcı adı veya şifre yanlış");
             }
-            else 
+
+            else
             {
                 frmKullanici.ShowDialog();
             }
+
+
+
+
         }
+
 
     }
 }

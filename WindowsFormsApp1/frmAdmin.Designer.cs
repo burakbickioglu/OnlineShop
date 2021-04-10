@@ -202,6 +202,7 @@ namespace WindowsFormsApp1
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "frmAdmin";
             this.Text = "frmAdmin";
+            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAdmin_FormClosed);
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridScreen)).EndInit();
             this.grpBakiyeOnay.ResumeLayout(false);

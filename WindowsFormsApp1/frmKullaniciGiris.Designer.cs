@@ -95,6 +95,7 @@ namespace WindowsFormsApp1
             this.Name = "frmKullaniciGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Giriş";
+            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmKullaniciGiris_FormClosed);
             this.Load += new System.EventHandler(this.frmKullaniciGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

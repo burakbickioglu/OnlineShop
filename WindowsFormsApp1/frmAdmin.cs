@@ -101,5 +101,7 @@ namespace WindowsFormsApp1
             bakiyeGoruntule();
             
         }
+
+        
     }
 }
