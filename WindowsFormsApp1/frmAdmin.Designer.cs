@@ -40,8 +40,10 @@ namespace WindowsFormsApp1
             this.lblEklenecekBakiye = new System.Windows.Forms.Label();
             this.btnBakiyeOnayla = new System.Windows.Forms.Button();
             this.grpStokOnay = new System.Windows.Forms.GroupBox();
+            this.lblKullaniciAdi2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblEklenecekStok = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnStokOnayla = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridScreen)).BeginInit();
             this.grpBakiyeOnay.SuspendLayout();
@@ -105,7 +107,7 @@ namespace WindowsFormsApp1
             this.grpBakiyeOnay.Controls.Add(this.lblEklenecekBakiye);
             this.grpBakiyeOnay.Controls.Add(this.btnBakiyeOnayla);
             this.grpBakiyeOnay.Controls.Add(this.label1);
-            this.grpBakiyeOnay.Location = new System.Drawing.Point(227, 416);
+            this.grpBakiyeOnay.Location = new System.Drawing.Point(209, 416);
             this.grpBakiyeOnay.Name = "grpBakiyeOnay";
             this.grpBakiyeOnay.Size = new System.Drawing.Size(490, 168);
             this.grpBakiyeOnay.TabIndex = 5;
@@ -124,11 +126,11 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 44);
+            this.label2.Location = new System.Drawing.Point(55, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 25);
+            this.label2.Size = new System.Drawing.Size(95, 25);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Kullanıcı adı: ";
+            this.label2.Text = "Ad Soyad:";
             // 
             // lblEklenecekBakiye
             // 
@@ -141,7 +143,7 @@ namespace WindowsFormsApp1
             // 
             // btnBakiyeOnayla
             // 
-            this.btnBakiyeOnayla.Location = new System.Drawing.Point(171, 124);
+            this.btnBakiyeOnayla.Location = new System.Drawing.Point(380, 124);
             this.btnBakiyeOnayla.Name = "btnBakiyeOnayla";
             this.btnBakiyeOnayla.Size = new System.Drawing.Size(104, 38);
             this.btnBakiyeOnayla.TabIndex = 5;
@@ -151,38 +153,59 @@ namespace WindowsFormsApp1
             // 
             // grpStokOnay
             // 
+            this.grpStokOnay.Controls.Add(this.lblKullaniciAdi2);
+            this.grpStokOnay.Controls.Add(this.label5);
             this.grpStokOnay.Controls.Add(this.lblEklenecekStok);
-            this.grpStokOnay.Controls.Add(this.button1);
+            this.grpStokOnay.Controls.Add(this.btnStokOnayla);
             this.grpStokOnay.Controls.Add(this.label3);
-            this.grpStokOnay.Location = new System.Drawing.Point(816, 416);
+            this.grpStokOnay.Location = new System.Drawing.Point(724, 416);
             this.grpStokOnay.Name = "grpStokOnay";
-            this.grpStokOnay.Size = new System.Drawing.Size(307, 123);
+            this.grpStokOnay.Size = new System.Drawing.Size(490, 168);
             this.grpStokOnay.TabIndex = 7;
             this.grpStokOnay.TabStop = false;
             this.grpStokOnay.Text = "Stok Onay";
             // 
+            // lblKullaniciAdi2
+            // 
+            this.lblKullaniciAdi2.AutoSize = true;
+            this.lblKullaniciAdi2.Location = new System.Drawing.Point(155, 29);
+            this.lblKullaniciAdi2.Name = "lblKullaniciAdi2";
+            this.lblKullaniciAdi2.Size = new System.Drawing.Size(33, 25);
+            this.lblKullaniciAdi2.TabIndex = 10;
+            this.lblKullaniciAdi2.Text = "ad";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(49, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 25);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Ad Soyad:";
+            // 
             // lblEklenecekStok
             // 
             this.lblEklenecekStok.AutoSize = true;
-            this.lblEklenecekStok.Location = new System.Drawing.Point(161, 29);
+            this.lblEklenecekStok.Location = new System.Drawing.Point(155, 69);
             this.lblEklenecekStok.Name = "lblEklenecekStok";
             this.lblEklenecekStok.Size = new System.Drawing.Size(63, 25);
             this.lblEklenecekStok.TabIndex = 6;
             this.lblEklenecekStok.Text = "label2";
             // 
-            // button1
+            // btnStokOnayla
             // 
-            this.button1.Location = new System.Drawing.Point(120, 69);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 38);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Onay";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnStokOnayla.Location = new System.Drawing.Point(380, 124);
+            this.btnStokOnayla.Name = "btnStokOnayla";
+            this.btnStokOnayla.Size = new System.Drawing.Size(104, 38);
+            this.btnStokOnayla.TabIndex = 5;
+            this.btnStokOnayla.Text = "Onay";
+            this.btnStokOnayla.UseVisualStyleBackColor = true;
+            this.btnStokOnayla.Click += new System.EventHandler(this.btnStokOnayla_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 29);
+            this.label3.Location = new System.Drawing.Point(6, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 25);
             this.label3.TabIndex = 4;
@@ -202,7 +225,6 @@ namespace WindowsFormsApp1
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "frmAdmin";
             this.Text = "frmAdmin";
-            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAdmin_FormClosed);
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridScreen)).EndInit();
             this.grpBakiyeOnay.ResumeLayout(false);
@@ -227,9 +249,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnBakiyeOnayla;
         private System.Windows.Forms.GroupBox grpStokOnay;
         private System.Windows.Forms.Label lblEklenecekStok;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnStokOnayla;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblKullaniciAdi;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblKullaniciAdi2;
+        private System.Windows.Forms.Label label5;
     }
 }
