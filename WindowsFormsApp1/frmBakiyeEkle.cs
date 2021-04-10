@@ -35,6 +35,7 @@ namespace WindowsFormsApp1
             if (result)
             {
                 MessageBox.Show("Bakiye yükleme talebi admin onayına gönderildi.");
+                this.Hide();
             }
             else
             {
