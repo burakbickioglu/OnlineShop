@@ -54,6 +54,7 @@ namespace WindowsFormsApp1
             this.btnAdminGiris.TabIndex = 1;
             this.btnAdminGiris.Text = "Admin Girişi";
             this.btnAdminGiris.UseVisualStyleBackColor = true;
+            this.btnAdminGiris.Click += new System.EventHandler(this.btnAdminGiris_Click);
             // 
             // btnUyeOl
             // 

@@ -28,6 +28,13 @@ namespace WindowsFormsApp1
         {
             string ad = txtKullaniciAd.Text;
             string sifre = txtKullaniciSifre.Text;
+            if (ad == "admin" && sifre == "1234")
+            {
+                frmAdmin fr = new frmAdmin();
+                fr.ShowDialog();
+            }
+
+
             kullanici = kullaniciManager.UserControl(ad, sifre);
             frmKullanici frmKullanici = new frmKullanici(kullanici);
             if (kullanici == null)
@@ -38,10 +45,7 @@ namespace WindowsFormsApp1
             {
                 frmKullanici.ShowDialog();
             }
-            
-
-
-
         }
+
     }
 }

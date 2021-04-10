@@ -37,5 +37,11 @@ namespace WindowsFormsApp1
             frmKullaniciGiris girisYap = new frmKullaniciGiris();
             girisYap.ShowDialog();
         }
+
+        private void btnAdminGiris_Click(object sender, EventArgs e)
+        {
+            frmKullaniciGiris girisYap = new frmKullaniciGiris();
+            girisYap.ShowDialog();
+        }
     }
 }
