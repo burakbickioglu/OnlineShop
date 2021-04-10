@@ -157,5 +157,11 @@ namespace WindowsFormsApp1
             datagridList();
             
         }
+
+        private void btnBakiyeEkle_Click(object sender, EventArgs e)
+        {
+            frmBakiyeEkle fr = new frmBakiyeEkle(_bakiye,bakiyeManager);
+            fr.ShowDialog();
+        }
     }
 }

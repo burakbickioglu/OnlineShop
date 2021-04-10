@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.grpKullaniciBilgileri = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBakiyeEkle = new System.Windows.Forms.Button();
             this.lblTc = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTel = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
             // 
             // grpKullaniciBilgileri
             // 
-            this.grpKullaniciBilgileri.Controls.Add(this.button2);
+            this.grpKullaniciBilgileri.Controls.Add(this.btnBakiyeEkle);
             this.grpKullaniciBilgileri.Controls.Add(this.lblTc);
             this.grpKullaniciBilgileri.Controls.Add(this.label5);
             this.grpKullaniciBilgileri.Controls.Add(this.lblTel);
@@ -83,15 +83,16 @@ namespace WindowsFormsApp1
             this.grpKullaniciBilgileri.TabStop = false;
             this.grpKullaniciBilgileri.Text = "Kullanıcı Bilgileri";
             // 
-            // button2
+            // btnBakiyeEkle
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(24, 169);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 29);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Bakiye Ekle";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBakiyeEkle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBakiyeEkle.Location = new System.Drawing.Point(24, 169);
+            this.btnBakiyeEkle.Name = "btnBakiyeEkle";
+            this.btnBakiyeEkle.Size = new System.Drawing.Size(104, 29);
+            this.btnBakiyeEkle.TabIndex = 2;
+            this.btnBakiyeEkle.Text = "Bakiye Ekle";
+            this.btnBakiyeEkle.UseVisualStyleBackColor = true;
+            this.btnBakiyeEkle.Click += new System.EventHandler(this.btnBakiyeEkle_Click);
             // 
             // lblTc
             // 
@@ -422,7 +423,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txtSatilacakMiktar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBakiyeEkle;
         private System.Windows.Forms.Button btnUrunEkle;
         private System.Windows.Forms.Button btnDataGridYenile;
     }
