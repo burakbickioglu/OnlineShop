@@ -71,13 +71,16 @@ namespace WindowsFormsApp1
         void satilacakUrunDoldur()
         {
             // satılabilecek ürünleri listeleme
-
-            foreach (var stok in _stok)
+            if (cmbSatilacakUrun.Items.Count==0)
             {
-                if (Convert.ToBoolean(stok.UrunOnay))
+                foreach (var stok in _stok)
                 {
-                    cmbSatilacakUrun.Items.Add(stok.UrunAd);
+                    if (Convert.ToBoolean(stok.UrunOnay))
+                    {
+                        cmbSatilacakUrun.Items.Add(stok.UrunAd);
+                    }
                 }
+
             }
 
         }
