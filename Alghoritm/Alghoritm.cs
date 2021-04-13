@@ -36,21 +36,23 @@ namespace Alghoritm
                 foreach (var mevcutalici in alicilar)
                 {
                     int toplamsatilanstok = 0;
-                    
+                    int kontrol = 1;
+
                     tumIlanlar = ilanManager.GetAll().Where(p => p.Durum == false && p.UrunId == mevcutalici.UrunId).OrderBy(p => p.BirimFiyat).ToList();
 
                     foreach (var ilan in tumIlanlar)
                     {
                         toplamsatilanstok += ilan.Miktar;
                     }
-                    
-                    alici = kullaniManager.getById(new Kullanici{KullaniciId = mevcutalici.AliciId});
+
+                    alici = kullaniManager.getById(new Kullanici { KullaniciId = mevcutalici.AliciId });
                     aliciBakiye = bakiyeManager.Get(new Bakiye { KullaniciId = mevcutalici.AliciId });
 
-                    while (mevcutalici.Miktar > 0 && tumIlanlar.Count!=0 && mevcutalici.Miktar>=toplamsatilanstok)
+                    while (mevcutalici.Miktar > 0 && toplamsatilanstok != 0)
                     {
                         foreach (var gecerliIlan in tumIlanlar)
                         {
+
                             aliciStok = stokManager.GetAll().SingleOrDefault(p =>
                                 p.KullaniciId == mevcutalici.AliciId && p.UrunId == mevcutalici.UrunId);
 
@@ -64,6 +66,7 @@ namespace Alghoritm
                                 {
 
                                     alinanmiktar = gecerliIlan.Miktar;
+                                    toplamsatilanstok -= gecerliIlan.Miktar;
                                     mevcutalici.Miktar -= alinanmiktar;
                                     aliciBakiye.MevcutBakiye -= (alinanmiktar * gecerliIlan.BirimFiyat);
                                     saticiBakiye.MevcutBakiye += (alinanmiktar * gecerliIlan.BirimFiyat);
@@ -85,11 +88,21 @@ namespace Alghoritm
                                     stokManager.Update(aliciStok);
                                     ilanManager.Update(gecerliIlan);
                                     alisEmirManager.Update(mevcutalici);
+
+                                    alimSatim.AliciId = alici.KullaniciId;
+                                    alimSatim.SaticiId = gecerliIlan.SaticiId;
+                                    alimSatim.UrunId = gecerliIlan.UrunId;
+                                    alimSatim.ToplamFiyat = (alinanmiktar * gecerliIlan.BirimFiyat);
+                                    alimSatimManager.Add(alimSatim);
+
+
+
                                 }
 
                                 else
                                 {
-                                    alinanmiktar =  mevcutalici.Miktar;
+                                    alinanmiktar = mevcutalici.Miktar;
+                                    toplamsatilanstok -= mevcutalici.Miktar;
                                     gecerliIlan.Miktar -= alinanmiktar;
                                     aliciBakiye.MevcutBakiye -= (alinanmiktar * gecerliIlan.BirimFiyat);
                                     saticiBakiye.MevcutBakiye += (alinanmiktar * gecerliIlan.BirimFiyat);
@@ -105,30 +118,22 @@ namespace Alghoritm
                                     stokManager.Update(aliciStok);
                                     ilanManager.Update(gecerliIlan);
                                     alisEmirManager.Update(mevcutalici);
+
+
+                                    alimSatim.AliciId = alici.KullaniciId;
+                                    alimSatim.SaticiId = gecerliIlan.SaticiId;
+                                    alimSatim.UrunId = gecerliIlan.UrunId;
+                                    alimSatim.ToplamFiyat = (alinanmiktar * gecerliIlan.BirimFiyat);
+                                    alimSatimManager.Add(alimSatim);
+
                                 }
 
                                 
-                                alimSatim.AliciId = alici.KullaniciId;
-                                alimSatim.SaticiId = gecerliIlan.SaticiId;
-                                alimSatim.UrunId = gecerliIlan.UrunId;
-                                alimSatim.ToplamFiyat = (alinanmiktar * gecerliIlan.BirimFiyat);
-                                alimSatimManager.Add(alimSatim);
-                                
-
                             }
-
-
                         }
-
                     }
-
-
-
                 }
             }
-
-
-
         }
     }
 }
