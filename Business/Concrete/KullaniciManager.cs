@@ -34,6 +34,11 @@ namespace Business.Concrete
             return _kullaniciDal.Get(p => p.KullaniciAd == kullaniciad && p.KullaniciSifre == sifre);
         }
 
+        public Kullanici getById(Kullanici kullanici)
+        {
+            return _kullaniciDal.Get(p => p.KullaniciId == kullanici.KullaniciId);
+        }
+
         public Kullanici Get(Kullanici kullanici)
         {
             return _kullaniciDal.Get(p => p.KullaniciAd == kullanici.KullaniciAd);

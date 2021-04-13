@@ -8,6 +8,6 @@ namespace Business.Abstract
     public interface IKullaniciService: IBaseService<Kullanici>
     {
         Kullanici UserControl(string kullaniciad, string sifre);
-        
+        Kullanici getById(Kullanici kullanici);
     }
 }

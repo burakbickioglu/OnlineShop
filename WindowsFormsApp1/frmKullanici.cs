@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.Pkcs;
 using System.Text;
 using System.Windows.Forms;
 using Business.Abstract;
@@ -34,6 +35,7 @@ namespace WindowsFormsApp1
         AlisEmirManager alisManager = new AlisEmirManager(new EfAlisEmirDal());
         StokManager stokManager = new StokManager(new EfStokDal());
         IlanManager ilanManager = new IlanManager(new EfIlanDal());
+        Alghoritm.Alghoritm algoritma = new Alghoritm.Alghoritm();
 
 
         private void frmKullanici_Load(object sender, EventArgs e)
@@ -102,6 +104,9 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Emir verilemedi");
             }
+            algoritma.alSat();
+
+
 
             satilacakUrunDoldur();
 
@@ -132,7 +137,8 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Ürün yetersiz");
             }
-            
+            algoritma.alSat();
+
             datagridList();
             
 

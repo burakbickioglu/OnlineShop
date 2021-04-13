@@ -4,6 +4,7 @@ using System.Linq;
 using Business.Concrete;
 using DataAccess.Concrete;
 using Entities.Concrete;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace Alghoritm
 {
@@ -14,7 +15,6 @@ namespace Alghoritm
 
 
             List<Ilan> tumIlanlar = new List<Ilan>();
-            List<Ilan> uyanIlanlar = new List<Ilan>();
             List<AlisEmir> alicilar = new List<AlisEmir>();
             Kullanici alici = new Kullanici();
             Kullanici satici = new Kullanici();
@@ -28,63 +28,105 @@ namespace Alghoritm
             KullaniciManager kullaniManager = new KullaniciManager(new EfKullaniciDal());
             BakiyeManager bakiyeManager = new BakiyeManager(new EfBakiyeDal());
             StokManager stokManager = new StokManager(new EfStokDal());
+            AlimSatimManager alimSatimManager = new AlimSatimManager(new EfAlimSatimDal());
 
             alicilar = alisEmirManager.GetAll().Where(p => p.Durum == false).ToList();
-
-            foreach (var mevcutalici in alicilar)
+            if (alicilar.Count != 0)
             {
-                tumIlanlar = ilanManager.GetAll().Where(p => p.Durum == false && p.UrunId == mevcutalici.UrunId).OrderBy(p => p.BirimFiyat).ToList();
-
-
-                alici = kullaniManager.Get(new Kullanici { KullaniciId = mevcutalici.AliciId });
-                aliciBakiye = bakiyeManager.Get(new Bakiye { KullaniciId = alici.KullaniciId });
-
-                while (mevcutalici.Miktar > 0)
+                foreach (var mevcutalici in alicilar)
                 {
-                    foreach (var gecerliIlan in tumIlanlar)
+                    int toplamsatilanstok = 0;
+                    
+                    tumIlanlar = ilanManager.GetAll().Where(p => p.Durum == false && p.UrunId == mevcutalici.UrunId).OrderBy(p => p.BirimFiyat).ToList();
+
+                    foreach (var ilan in tumIlanlar)
                     {
-                        satici = kullaniManager.Get(new Kullanici { KullaniciId = gecerliIlan.SaticiId });
+                        toplamsatilanstok += ilan.Miktar;
+                    }
+                    
+                    alici = kullaniManager.getById(new Kullanici{KullaniciId = mevcutalici.AliciId});
+                    aliciBakiye = bakiyeManager.Get(new Bakiye { KullaniciId = mevcutalici.AliciId });
 
-                        aliciStok = stokManager.GetAll().SingleOrDefault(p =>
-                            p.KullaniciId == mevcutalici.AliciId && p.UrunId == mevcutalici.UrunId);
-
-                        saticiBakiye = bakiyeManager.Get(new Bakiye { KullaniciId = gecerliIlan.SaticiId });
-
-
-                        if (mevcutalici.Miktar >= gecerliIlan.Miktar)
+                    while (mevcutalici.Miktar > 0 && tumIlanlar.Count!=0 && mevcutalici.Miktar>=toplamsatilanstok)
+                    {
+                        foreach (var gecerliIlan in tumIlanlar)
                         {
-                            if (aliciBakiye.MevcutBakiye >= (gecerliIlan.Miktar * gecerliIlan.BirimFiyat))
+                            aliciStok = stokManager.GetAll().SingleOrDefault(p =>
+                                p.KullaniciId == mevcutalici.AliciId && p.UrunId == mevcutalici.UrunId);
+
+                            saticiBakiye = bakiyeManager.Get(new Bakiye { KullaniciId = gecerliIlan.SaticiId });
+                            AlimSatim alimSatim = new AlimSatim();
+
+                            if (aliciBakiye.MevcutBakiye >= (gecerliIlan.Miktar * gecerliIlan.BirimFiyat) && alici.KullaniciId != gecerliIlan.SaticiId && gecerliIlan.Durum == false)
                             {
-                                mevcutalici.Miktar -= gecerliIlan.Miktar;
-                                aliciBakiye.MevcutBakiye -= (gecerliIlan.Miktar * gecerliIlan.BirimFiyat);
-                                saticiBakiye.MevcutBakiye += (gecerliIlan.Miktar * gecerliIlan.BirimFiyat);
-                                aliciStok.UrunMiktar += gecerliIlan.Miktar;
-                                gecerliIlan.Miktar = 0;
-                                gecerliIlan.Durum = true;
-                                
-
-
-                                if (mevcutalici.Miktar == 0)
+                                int alinanmiktar;
+                                if (mevcutalici.Miktar >= gecerliIlan.Miktar)
                                 {
-                                    mevcutalici.Durum = true;
+
+                                    alinanmiktar = gecerliIlan.Miktar;
+                                    mevcutalici.Miktar -= alinanmiktar;
+                                    aliciBakiye.MevcutBakiye -= (alinanmiktar * gecerliIlan.BirimFiyat);
+                                    saticiBakiye.MevcutBakiye += (alinanmiktar * gecerliIlan.BirimFiyat);
+                                    aliciStok.UrunMiktar += alinanmiktar;
+                                    aliciStok.UrunOnay = true;
+                                    gecerliIlan.Miktar = 0;
+                                    gecerliIlan.Durum = true;
+
+
+                                    if (mevcutalici.Miktar == 0)
+                                    {
+                                        mevcutalici.Durum = true;
+                                    }
+
+                                    alimSatim.Miktar = alinanmiktar;
+
+                                    bakiyeManager.Update(aliciBakiye);
+                                    bakiyeManager.Update(saticiBakiye);
+                                    stokManager.Update(aliciStok);
+                                    ilanManager.Update(gecerliIlan);
+                                    alisEmirManager.Update(mevcutalici);
                                 }
 
-                                stokManager.Update(aliciStok);
-                                ilanManager.Update(gecerliIlan);
-                                alisEmirManager.Update(mevcutalici);
-                            }
-                        }
-                        
+                                else
+                                {
+                                    alinanmiktar =  mevcutalici.Miktar;
+                                    gecerliIlan.Miktar -= alinanmiktar;
+                                    aliciBakiye.MevcutBakiye -= (alinanmiktar * gecerliIlan.BirimFiyat);
+                                    saticiBakiye.MevcutBakiye += (alinanmiktar * gecerliIlan.BirimFiyat);
+                                    aliciStok.UrunMiktar += alinanmiktar;
+                                    aliciStok.UrunOnay = true;
+                                    mevcutalici.Miktar = 0;
+                                    mevcutalici.Durum = true;
 
+                                    alimSatim.Miktar = alinanmiktar;
+
+                                    bakiyeManager.Update(aliciBakiye);
+                                    bakiyeManager.Update(saticiBakiye);
+                                    stokManager.Update(aliciStok);
+                                    ilanManager.Update(gecerliIlan);
+                                    alisEmirManager.Update(mevcutalici);
+                                }
+
+                                
+                                alimSatim.AliciId = alici.KullaniciId;
+                                alimSatim.SaticiId = gecerliIlan.SaticiId;
+                                alimSatim.UrunId = gecerliIlan.UrunId;
+                                alimSatim.ToplamFiyat = (alinanmiktar * gecerliIlan.BirimFiyat);
+                                alimSatimManager.Add(alimSatim);
+                                
+
+                            }
+
+
+                        }
 
                     }
 
+
+
                 }
-
-
-
-
             }
+
 
 
         }
