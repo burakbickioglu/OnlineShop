@@ -59,13 +59,16 @@ namespace WindowsFormsApp1
 
         public void stokGoruntule()
         {
-            _stoklar = stokManager.GetAll().Where(p => p.UrunOnay == false).ToList();
+            _stoklar = stokManager.GetAll().Where(p => p.UrunOnay == false && p.UrunMiktar>0).ToList();
             DataGridScreen.DataSource = _stoklar;
         }
 
         private void btnKullanicilar_Click(object sender, EventArgs e)
         {
+            grpStokOnay.Visible = false;
+            grpBakiyeOnay.Visible = false;
             kullaniciListele();
+
         }
 
 

@@ -25,9 +25,13 @@ namespace WindowsFormsApp1
             
             Kullanici kullanici = new Kullanici();
             Bakiye bakiye = new Bakiye();
+            List<Urun> uruns = new List<Urun>();
+
             KullaniciManager kullaniciManager = new KullaniciManager(new EfKullaniciDal());
             BakiyeManager bakiyeManager = new BakiyeManager(new EfBakiyeDal());
-            
+            UrunManager urunManager = new UrunManager(new EfUrunDal());
+            StokManager stokManager = new StokManager(new EfStokDal());
+
             kullanici.Ad = txtAd.Text;
             kullanici.Soyad = txtSoyad.Text;
             kullanici.TelNo = txtTel.Text;
@@ -36,12 +40,27 @@ namespace WindowsFormsApp1
             kullanici.TcNo = txtTcNo.Text;
             kullanici.eMail = txtEmail.Text;
             kullanici.Adres = rchAdres.Text;
+
             var result = kullaniciManager.Add(kullanici);
             bakiye.KullaniciId = kullaniciManager.Get(kullanici).KullaniciId;
             bakiye.MevcutBakiye = 0;
             bakiye.EklenecekBakiye = 0;
-            bakiye.BakiyeOnay = false;
+            bakiye.BakiyeOnay = true;
             var result2 = bakiyeManager.Add(bakiye);
+
+            kullanici = kullaniciManager.Get(kullanici);
+            uruns = urunManager.GetAll();
+
+            foreach (var urun in uruns)
+            {
+                Stok stok = new Stok();
+                stok.KullaniciId = kullanici.KullaniciId;
+                stok.UrunId = urun.UrunId;
+                stok.UrunMiktar = 0;
+                stok.UrunOnay = false;
+                stokManager.Add(stok);
+            }
+
             
             if (result)
             {
