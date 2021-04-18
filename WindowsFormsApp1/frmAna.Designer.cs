@@ -33,9 +33,8 @@ namespace WindowsFormsApp1
             this.btnAdminGiris = new System.Windows.Forms.Button();
             this.btnUyeOl = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -88,11 +87,21 @@ namespace WindowsFormsApp1
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(912, 197);
             this.panel1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label2.Location = new System.Drawing.Point(358, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(271, 45);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Online Shopping";
             // 
             // pictureBox1
             // 
@@ -103,28 +112,6 @@ namespace WindowsFormsApp1
             this.pictureBox1.Size = new System.Drawing.Size(130, 130);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(405, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 45);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hoşgeldiniz";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(358, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(297, 45);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Online Shopping\'e";
             // 
             // frmAna
             // 
@@ -156,7 +143,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnAdminGiris;
         private System.Windows.Forms.Button btnUyeOl;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
     }
