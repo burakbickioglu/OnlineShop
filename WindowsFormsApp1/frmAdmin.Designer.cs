@@ -86,6 +86,7 @@ namespace WindowsFormsApp1
             this.DataGridScreen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridScreen.Location = new System.Drawing.Point(227, 12);
             this.DataGridScreen.Name = "DataGridScreen";
+            this.DataGridScreen.RowHeadersWidth = 51;
             this.DataGridScreen.RowTemplate.Height = 25;
             this.DataGridScreen.Size = new System.Drawing.Size(971, 378);
             this.DataGridScreen.TabIndex = 3;
@@ -96,7 +97,7 @@ namespace WindowsFormsApp1
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 25);
+            this.label1.Size = new System.Drawing.Size(189, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Eklenecek tutar: ";
             // 
@@ -119,7 +120,7 @@ namespace WindowsFormsApp1
             this.lblKullaniciAdi.AutoSize = true;
             this.lblKullaniciAdi.Location = new System.Drawing.Point(161, 44);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
-            this.lblKullaniciAdi.Size = new System.Drawing.Size(33, 25);
+            this.lblKullaniciAdi.Size = new System.Drawing.Size(40, 32);
             this.lblKullaniciAdi.TabIndex = 8;
             this.lblKullaniciAdi.Text = "ad";
             // 
@@ -128,7 +129,7 @@ namespace WindowsFormsApp1
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(55, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 25);
+            this.label2.Size = new System.Drawing.Size(120, 32);
             this.label2.TabIndex = 7;
             this.label2.Text = "Ad Soyad:";
             // 
@@ -137,7 +138,7 @@ namespace WindowsFormsApp1
             this.lblEklenecekBakiye.AutoSize = true;
             this.lblEklenecekBakiye.Location = new System.Drawing.Point(161, 69);
             this.lblEklenecekBakiye.Name = "lblEklenecekBakiye";
-            this.lblEklenecekBakiye.Size = new System.Drawing.Size(63, 25);
+            this.lblEklenecekBakiye.Size = new System.Drawing.Size(78, 32);
             this.lblEklenecekBakiye.TabIndex = 6;
             this.lblEklenecekBakiye.Text = "label2";
             // 
@@ -170,7 +171,7 @@ namespace WindowsFormsApp1
             this.lblKullaniciAdi2.AutoSize = true;
             this.lblKullaniciAdi2.Location = new System.Drawing.Point(155, 29);
             this.lblKullaniciAdi2.Name = "lblKullaniciAdi2";
-            this.lblKullaniciAdi2.Size = new System.Drawing.Size(33, 25);
+            this.lblKullaniciAdi2.Size = new System.Drawing.Size(40, 32);
             this.lblKullaniciAdi2.TabIndex = 10;
             this.lblKullaniciAdi2.Text = "ad";
             // 
@@ -179,7 +180,7 @@ namespace WindowsFormsApp1
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(49, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 25);
+            this.label5.Size = new System.Drawing.Size(120, 32);
             this.label5.TabIndex = 9;
             this.label5.Text = "Ad Soyad:";
             // 
@@ -188,7 +189,7 @@ namespace WindowsFormsApp1
             this.lblEklenecekStok.AutoSize = true;
             this.lblEklenecekStok.Location = new System.Drawing.Point(155, 69);
             this.lblEklenecekStok.Name = "lblEklenecekStok";
-            this.lblEklenecekStok.Size = new System.Drawing.Size(63, 25);
+            this.lblEklenecekStok.Size = new System.Drawing.Size(78, 32);
             this.lblEklenecekStok.TabIndex = 6;
             this.lblEklenecekStok.Text = "label2";
             // 
@@ -207,14 +208,15 @@ namespace WindowsFormsApp1
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 69);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 25);
+            this.label3.Size = new System.Drawing.Size(183, 32);
             this.label3.TabIndex = 4;
             this.label3.Text = "Eklenecek stok: ";
             // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1226, 596);
             this.Controls.Add(this.grpStokOnay);
             this.Controls.Add(this.grpBakiyeOnay);
