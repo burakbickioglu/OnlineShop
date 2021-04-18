@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
             // 
             // btnBakiyeEkle
             // 
-            this.btnBakiyeEkle.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnBakiyeEkle.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnBakiyeEkle.FlatAppearance.BorderSize = 0;
             this.btnBakiyeEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBakiyeEkle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -192,7 +192,7 @@ namespace WindowsFormsApp1
             // 
             // btnDataGridYenile
             // 
-            this.btnDataGridYenile.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnDataGridYenile.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnDataGridYenile.FlatAppearance.BorderSize = 0;
             this.btnDataGridYenile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDataGridYenile.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -207,7 +207,7 @@ namespace WindowsFormsApp1
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnUrunEkle.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnUrunEkle.FlatAppearance.BorderSize = 0;
             this.btnUrunEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUrunEkle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -248,7 +248,7 @@ namespace WindowsFormsApp1
             // 
             // btnAlis
             // 
-            this.btnAlis.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnAlis.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnAlis.FlatAppearance.BorderSize = 0;
             this.btnAlis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlis.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -348,7 +348,7 @@ namespace WindowsFormsApp1
             // 
             // btnSatis
             // 
-            this.btnSatis.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnSatis.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnSatis.FlatAppearance.BorderSize = 0;
             this.btnSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSatis.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
