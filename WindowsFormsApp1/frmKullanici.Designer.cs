@@ -76,6 +76,7 @@ namespace WindowsFormsApp1
             this.grpKullaniciBilgileri.Controls.Add(this.lblAdSoyad);
             this.grpKullaniciBilgileri.Controls.Add(this.label2);
             this.grpKullaniciBilgileri.Controls.Add(this.label1);
+            this.grpKullaniciBilgileri.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.grpKullaniciBilgileri.Location = new System.Drawing.Point(12, 12);
             this.grpKullaniciBilgileri.Name = "grpKullaniciBilgileri";
             this.grpKullaniciBilgileri.Size = new System.Drawing.Size(260, 225);
@@ -85,10 +86,10 @@ namespace WindowsFormsApp1
             // 
             // btnBakiyeEkle
             // 
-            this.btnBakiyeEkle.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnBakiyeEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
             this.btnBakiyeEkle.FlatAppearance.BorderSize = 0;
             this.btnBakiyeEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBakiyeEkle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBakiyeEkle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBakiyeEkle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnBakiyeEkle.Location = new System.Drawing.Point(98, 181);
             this.btnBakiyeEkle.Name = "btnBakiyeEkle";
@@ -183,6 +184,7 @@ namespace WindowsFormsApp1
             this.groupBox1.Controls.Add(this.btnDataGridYenile);
             this.groupBox1.Controls.Add(this.btnUrunEkle);
             this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 243);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(778, 358);
@@ -192,10 +194,10 @@ namespace WindowsFormsApp1
             // 
             // btnDataGridYenile
             // 
-            this.btnDataGridYenile.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnDataGridYenile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
             this.btnDataGridYenile.FlatAppearance.BorderSize = 0;
             this.btnDataGridYenile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDataGridYenile.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDataGridYenile.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDataGridYenile.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnDataGridYenile.Location = new System.Drawing.Point(6, 38);
             this.btnDataGridYenile.Name = "btnDataGridYenile";
@@ -207,10 +209,10 @@ namespace WindowsFormsApp1
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnUrunEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
             this.btnUrunEkle.FlatAppearance.BorderSize = 0;
             this.btnUrunEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUrunEkle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUrunEkle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUrunEkle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnUrunEkle.Location = new System.Drawing.Point(613, 38);
             this.btnUrunEkle.Name = "btnUrunEkle";
@@ -239,6 +241,7 @@ namespace WindowsFormsApp1
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(295, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(236, 225);
@@ -248,10 +251,10 @@ namespace WindowsFormsApp1
             // 
             // btnAlis
             // 
-            this.btnAlis.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAlis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
             this.btnAlis.FlatAppearance.BorderSize = 0;
             this.btnAlis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlis.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAlis.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAlis.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAlis.Location = new System.Drawing.Point(83, 126);
             this.btnAlis.Name = "btnAlis";
@@ -309,6 +312,7 @@ namespace WindowsFormsApp1
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.Location = new System.Drawing.Point(554, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(236, 225);
@@ -348,10 +352,10 @@ namespace WindowsFormsApp1
             // 
             // btnSatis
             // 
-            this.btnSatis.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnSatis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
             this.btnSatis.FlatAppearance.BorderSize = 0;
             this.btnSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSatis.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSatis.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSatis.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSatis.Location = new System.Drawing.Point(84, 175);
             this.btnSatis.Name = "btnSatis";
