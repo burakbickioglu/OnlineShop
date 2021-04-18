@@ -34,19 +34,22 @@ namespace WindowsFormsApp1
             this.label2 = new System.Windows.Forms.Label();
             this.txtKullaniciSifre = new System.Windows.Forms.TextBox();
             this.btnGiris = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtKullaniciAd
             // 
-            this.txtKullaniciAd.Location = new System.Drawing.Point(134, 12);
+            this.txtKullaniciAd.Location = new System.Drawing.Point(113, 300);
             this.txtKullaniciAd.Name = "txtKullaniciAd";
-            this.txtKullaniciAd.Size = new System.Drawing.Size(166, 33);
+            this.txtKullaniciAd.Size = new System.Drawing.Size(166, 39);
             this.txtKullaniciAd.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 15);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(113, 272);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 25);
             this.label1.TabIndex = 1;
@@ -55,7 +58,8 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 61);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(113, 342);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 25);
             this.label2.TabIndex = 3;
@@ -63,27 +67,43 @@ namespace WindowsFormsApp1
             // 
             // txtKullaniciSifre
             // 
-            this.txtKullaniciSifre.Location = new System.Drawing.Point(134, 58);
+            this.txtKullaniciSifre.Location = new System.Drawing.Point(113, 370);
             this.txtKullaniciSifre.Name = "txtKullaniciSifre";
-            this.txtKullaniciSifre.Size = new System.Drawing.Size(166, 33);
+            this.txtKullaniciSifre.Size = new System.Drawing.Size(166, 39);
             this.txtKullaniciSifre.TabIndex = 2;
             this.txtKullaniciSifre.UseSystemPasswordChar = true;
             // 
             // btnGiris
             // 
-            this.btnGiris.Location = new System.Drawing.Point(161, 106);
+            this.btnGiris.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnGiris.FlatAppearance.BorderSize = 0;
+            this.btnGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGiris.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGiris.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGiris.Location = new System.Drawing.Point(194, 435);
             this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(113, 33);
+            this.btnGiris.Size = new System.Drawing.Size(98, 28);
             this.btnGiris.TabIndex = 4;
             this.btnGiris.Text = "Giriş";
-            this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.userl;
+            this.pictureBox1.Location = new System.Drawing.Point(151, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // frmKullaniciGiris
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 153);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(441, 489);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtKullaniciSifre);
@@ -95,8 +115,8 @@ namespace WindowsFormsApp1
             this.Name = "frmKullaniciGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Giriş";
-            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmKullaniciGiris_FormClosed);
             this.Load += new System.EventHandler(this.frmKullaniciGiris_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +129,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtKullaniciSifre;
         private System.Windows.Forms.Button btnGiris;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
