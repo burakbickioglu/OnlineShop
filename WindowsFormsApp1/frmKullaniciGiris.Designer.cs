@@ -52,6 +52,7 @@ namespace WindowsFormsApp1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(134)))), ((int)(((byte)(48)))));
             this.label1.Location = new System.Drawing.Point(173, 245);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 25);
@@ -62,7 +63,8 @@ namespace WindowsFormsApp1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(173, 310);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(134)))), ((int)(((byte)(48)))));
+            this.label2.Location = new System.Drawing.Point(173, 324);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 25);
             this.label2.TabIndex = 3;
@@ -71,7 +73,7 @@ namespace WindowsFormsApp1
             // txtKullaniciSifre
             // 
             this.txtKullaniciSifre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtKullaniciSifre.Location = new System.Drawing.Point(173, 338);
+            this.txtKullaniciSifre.Location = new System.Drawing.Point(173, 352);
             this.txtKullaniciSifre.Name = "txtKullaniciSifre";
             this.txtKullaniciSifre.Size = new System.Drawing.Size(166, 34);
             this.txtKullaniciSifre.TabIndex = 2;
@@ -79,12 +81,12 @@ namespace WindowsFormsApp1
             // 
             // btnGiris
             // 
-            this.btnGiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
+            this.btnGiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(99)))), ((int)(((byte)(155)))));
             this.btnGiris.FlatAppearance.BorderSize = 0;
             this.btnGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGiris.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGiris.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGiris.Location = new System.Drawing.Point(226, 400);
+            this.btnGiris.Location = new System.Drawing.Point(226, 408);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(113, 35);
             this.btnGiris.TabIndex = 4;
