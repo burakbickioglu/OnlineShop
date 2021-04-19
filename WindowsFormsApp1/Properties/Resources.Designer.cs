@@ -83,6 +83,36 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap add_wallet_1853738_1572628 {
+            get {
+                object obj = ResourceManager.GetObject("add-wallet-1853738-1572628", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_wallet_1853738_15726281 {
+            get {
+                object obj = ResourceManager.GetObject("add-wallet-1853738-15726281", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_wallet_1853738_15726282 {
+            get {
+                object obj = ResourceManager.GetObject("add-wallet-1853738-15726282", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap admin {
             get {
                 object obj = ResourceManager.GetObject("admin", resourceCulture);

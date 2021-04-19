@@ -36,9 +36,9 @@ namespace WindowsFormsApp1
             this.lblTel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblBakiye = new System.Windows.Forms.Label();
-            this.lblAdSoyad = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblAdSoyad = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDataGridYenile = new System.Windows.Forms.Button();
             this.btnUrunEkle = new System.Windows.Forms.Button();
@@ -94,11 +94,14 @@ namespace WindowsFormsApp1
             this.btnBakiyeEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBakiyeEkle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBakiyeEkle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBakiyeEkle.Location = new System.Drawing.Point(98, 240);
+            this.btnBakiyeEkle.Image = global::WindowsFormsApp1.Properties.Resources.add_wallet_1853738_15726281;
+            this.btnBakiyeEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBakiyeEkle.Location = new System.Drawing.Point(130, 232);
             this.btnBakiyeEkle.Name = "btnBakiyeEkle";
-            this.btnBakiyeEkle.Size = new System.Drawing.Size(133, 38);
+            this.btnBakiyeEkle.Size = new System.Drawing.Size(178, 55);
             this.btnBakiyeEkle.TabIndex = 2;
             this.btnBakiyeEkle.Text = "Bakiye Ekle";
+            this.btnBakiyeEkle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBakiyeEkle.UseVisualStyleBackColor = false;
             this.btnBakiyeEkle.Click += new System.EventHandler(this.btnBakiyeEkle_Click);
             // 
@@ -154,17 +157,6 @@ namespace WindowsFormsApp1
             this.lblBakiye.TabIndex = 3;
             this.lblBakiye.Text = "??";
             // 
-            // lblAdSoyad
-            // 
-            this.lblAdSoyad.AutoSize = true;
-            this.lblAdSoyad.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAdSoyad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAdSoyad.Location = new System.Drawing.Point(510, 83);
-            this.lblAdSoyad.Name = "lblAdSoyad";
-            this.lblAdSoyad.Size = new System.Drawing.Size(204, 46);
-            this.lblAdSoyad.TabIndex = 2;
-            this.lblAdSoyad.Text = "kullaniciadi";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -186,6 +178,17 @@ namespace WindowsFormsApp1
             this.label1.Size = new System.Drawing.Size(102, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ad Soyad:";
+            // 
+            // lblAdSoyad
+            // 
+            this.lblAdSoyad.AutoSize = true;
+            this.lblAdSoyad.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAdSoyad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAdSoyad.Location = new System.Drawing.Point(510, 83);
+            this.lblAdSoyad.Name = "lblAdSoyad";
+            this.lblAdSoyad.Size = new System.Drawing.Size(204, 46);
+            this.lblAdSoyad.TabIndex = 2;
+            this.lblAdSoyad.Text = "kullaniciadi";
             // 
             // groupBox1
             // 
