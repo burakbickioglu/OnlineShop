@@ -9,11 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{4C28837E-DA71-4CFA-AC86-81E05A939E71}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTest", "ConsoleTest\ConsoleTest.csproj", "{E8CBEC44-DF3B-40FF-8643-4CD178946AE8}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{DEB3EDAC-64B2-410B-B51E-FF87704D4AEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alghoritm", "Alghoritm\Alghoritm.csproj", "{2DD35114-6FB4-4EC2-ABDD-F8F93691B947}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alghoritm", "Alghoritm\Alghoritm.csproj", "{2DD35114-6FB4-4EC2-ABDD-F8F93691B947}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +31,6 @@ Global
 		{4C28837E-DA71-4CFA-AC86-81E05A939E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C28837E-DA71-4CFA-AC86-81E05A939E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C28837E-DA71-4CFA-AC86-81E05A939E71}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E8CBEC44-DF3B-40FF-8643-4CD178946AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E8CBEC44-DF3B-40FF-8643-4CD178946AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E8CBEC44-DF3B-40FF-8643-4CD178946AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E8CBEC44-DF3B-40FF-8643-4CD178946AE8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DEB3EDAC-64B2-410B-B51E-FF87704D4AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DEB3EDAC-64B2-410B-B51E-FF87704D4AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEB3EDAC-64B2-410B-B51E-FF87704D4AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
