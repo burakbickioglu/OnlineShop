@@ -8,7 +8,7 @@ namespace Entities.DTOs
 {
     public class UserStockDto : IDto
     {
-
+        // bu dto farklı tablolardan kullanıcının stok bilgilerini tutar
         public int? StokKod { get; set; }
         public int? KullaniciId { get; set; }
         public string UrunAd { get; set; }

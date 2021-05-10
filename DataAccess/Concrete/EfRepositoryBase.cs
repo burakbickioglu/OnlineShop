@@ -13,6 +13,10 @@ namespace DataAccess.Concrete
         where TEntity : class, IEntity, new()
         where TContext : DbContext, new()
     {
+
+        // Bu sınıf diğer dataacces sınıflarının base görevini üstlenen bir generic sınıftır. İlgili crud işlemlerini kalıtım alan diğer sınıfların da gerçekleştirebilmesini sağlar.
+
+        // Entity framework ile add metodu aşağıdaki gibi gerçekleştirilmiştir.
         public bool Add(TEntity entity)
         {
             using (TContext context = new TContext())
@@ -25,6 +29,7 @@ namespace DataAccess.Concrete
 
         }
 
+        // Entity framework ile delete metodu aşağıdaki gibi gerçekleştirilmiştir.
         public bool Delete(TEntity entity)
         {
             using (TContext context = new TContext())
@@ -37,6 +42,7 @@ namespace DataAccess.Concrete
 
         }
 
+        // Entity framework ile get metodu aşağıdaki gibi gerçekleştirilmiştir.
         public TEntity Get(Expression<Func<TEntity, bool>> filter)
         {
             using (TContext context = new TContext())
@@ -45,6 +51,7 @@ namespace DataAccess.Concrete
             }
         }
 
+        // Entity framework ile getall metodu aşağıdaki gibi gerçekleştirilmiştir.
         public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {
             using (TContext context = new TContext())
@@ -55,6 +62,7 @@ namespace DataAccess.Concrete
             }
         }
 
+        // Entity framework ile update metodu aşağıdaki gibi gerçekleştirilmiştir.
         public bool Update(TEntity entity)
         {
             using (TContext context = new TContext())

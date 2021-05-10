@@ -24,12 +24,13 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        // ilgili nesneler oluşturuluyor
         Bakiye _bakiye = new Bakiye();
         List<Urun> _uruns = new List<Urun>();
         List<UserStockDto> _stok = new List<UserStockDto>();
         List<Stok> _userStok = new List<Stok>();
         
-
+        // ilgili managerler oluşturuluyor
         BakiyeManager bakiyeManager = new BakiyeManager(new EfBakiyeDal());
         UrunManager urunManager = new UrunManager(new EfUrunDal());
         AlisEmirManager alisManager = new AlisEmirManager(new EfAlisEmirDal());
@@ -40,6 +41,7 @@ namespace WindowsFormsApp1
 
         private void frmKullanici_Load(object sender, EventArgs e)
         {
+            // kullanıcının bilgileri ilgili nesnelere aktarılıyor
             _bakiye.KullaniciId = _kullanici.KullaniciId;
             _bakiye = bakiyeManager.Get(_bakiye);
             lblAdSoyad.Text = _kullanici.Ad + " " + _kullanici.Soyad;
@@ -89,7 +91,7 @@ namespace WindowsFormsApp1
 
         private void btnAlis_Click(object sender, EventArgs e)
         {
-
+            // alış emri verildiğinde veritabanına ilgili güncellemeleri yapılıyor
             AlisEmir alisEmir = new AlisEmir();
             alisEmir.AliciId = _kullanici.KullaniciId;
             alisEmir.UrunId = urunManager.Get(new Urun { UrunAd = cmbAlinacakUrun.Text }).UrunId;
@@ -114,6 +116,7 @@ namespace WindowsFormsApp1
 
         private void btnSatis_Click(object sender, EventArgs e)
         {
+            // satış emri verildiğinde veritabanına ilgili güncellemeleri yapılıyor
             Ilan ilan = new Ilan();
             ilan.UrunId = urunManager.Get(new Urun { UrunAd = cmbSatilacakUrun.Text }).UrunId;
             ilan.Miktar = Convert.ToInt16(txtSatilacakMiktar.Text);
@@ -146,6 +149,7 @@ namespace WindowsFormsApp1
 
         public void datagridList()
         {
+            // datagride stoklar listeleniyor
             _stok = stokManager.GetUserStockDetail(_kullanici);
             dataGridView1.DataSource = _stok;
 

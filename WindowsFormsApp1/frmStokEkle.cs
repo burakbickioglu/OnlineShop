@@ -40,12 +40,14 @@ namespace WindowsFormsApp1
 
         private void btnIstekGonder_Click(object sender, EventArgs e)
         {
+            // istek gönder butonuna tıklandığında ilgili stok güncellenir ve durumu false olarak güncellenir. Böylelikle admin bu isteği görüntüleyip onaylayabilecektir.
             _stok.KullaniciId = _kullanici.KullaniciId;
             _stok.UrunId = urunManager.Get(new Urun { UrunAd = cmbEklenecekUrun.Text }).UrunId;
             _stok.UrunMiktar = Convert.ToInt16(txtMiktar.Text);
             _stok.UrunOnay = false;
             var kontrol = stokManager.GetAll().SingleOrDefault(p => p.KullaniciId == _stok.KullaniciId && p.UrunId == _stok.UrunId);
 
+            
             Stok temp = stokManager.GetAll().FirstOrDefault(p => p.KullaniciId == _kullanici.KullaniciId && p.UrunId == _stok.UrunId);
 
             if (temp != null)

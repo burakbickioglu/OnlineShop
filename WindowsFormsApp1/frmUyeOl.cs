@@ -22,16 +22,18 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             
-            
+            // ilgili nesneler oluşturuluyor
             Kullanici kullanici = new Kullanici();
             Bakiye bakiye = new Bakiye();
             List<Urun> uruns = new List<Urun>();
 
+            // ilgili manager nesneleri oluşturuluyor 
             KullaniciManager kullaniciManager = new KullaniciManager(new EfKullaniciDal());
             BakiyeManager bakiyeManager = new BakiyeManager(new EfBakiyeDal());
             UrunManager urunManager = new UrunManager(new EfUrunDal());
             StokManager stokManager = new StokManager(new EfStokDal());
 
+            // girilen bilgiler kullanıcı nesnesine aktarılıyor
             kullanici.Ad = txtAd.Text;
             kullanici.Soyad = txtSoyad.Text;
             kullanici.TelNo = txtTel.Text;
@@ -51,6 +53,7 @@ namespace WindowsFormsApp1
             kullanici = kullaniciManager.Get(kullanici);
             uruns = urunManager.GetAll();
 
+            // ürün tablosuna kullanıcının boş stokları ekleniyor
             foreach (var urun in uruns)
             {
                 Stok stok = new Stok();

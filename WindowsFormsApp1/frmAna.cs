@@ -28,18 +28,21 @@ namespace WindowsFormsApp1
 
         private void btnUyeOl_Click(object sender, EventArgs e)
         {
+            // üye ol butonuna tıklandığında ilgili form çağrılır.
             frmUyeOl uyeOl = new frmUyeOl();
             uyeOl.ShowDialog();
         }
 
         private void btnKullaniciGiris_Click(object sender, EventArgs e)
         {
+            // kullanıcı girişi butonuna tıklandığında ilgili form çağrılır.
             frmKullaniciGiris girisYap = new frmKullaniciGiris();
             girisYap.ShowDialog();
         }
 
         private void btnAdminGiris_Click(object sender, EventArgs e)
         {
+            // admin girişi butonuna tıklandığında ilgili form çağrılır.
             frmKullaniciGiris girisYap = new frmKullaniciGiris();
             girisYap.ShowDialog();
         }

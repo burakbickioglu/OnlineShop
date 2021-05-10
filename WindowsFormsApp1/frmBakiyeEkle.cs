@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
         private BakiyeManager _bakiyeManager;
         public frmBakiyeEkle(Bakiye bakiye, BakiyeManager bakiyeManager)
         {
+            // parametre olarak gelen değişkenlerin referansı yerel değişkenlerin referanslarına aktarılır
             _bakiye = bakiye;
             _bakiyeManager = bakiyeManager;
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace WindowsFormsApp1
 
         private void btnIstekGonder_Click(object sender, EventArgs e)
         {
+            // istek gönder butonuna basıldığı zaman bakiye güncellenir ve false durumuna çekilir. Böylece admin bu isteği görebilir
             decimal eklenecek = Convert.ToDecimal(txtTutar.Text);
             _bakiye.EklenecekBakiye += eklenecek;
             _bakiye.BakiyeOnay = false;

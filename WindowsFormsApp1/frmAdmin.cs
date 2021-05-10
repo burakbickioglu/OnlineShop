@@ -19,16 +19,19 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        // Kullanıcı bilgileri oluşturulan nesne örneklerine aktarılır.
         List<Kullanici> _kullanicilar = new List<Kullanici>();
         Kullanici _kullanici = new Kullanici();
 
+        // Kullanıcı bakiyeleri oluşturulan nesne örneklerine aktarılır.
         List<Bakiye> _bakiyeler = new List<Bakiye>();
         Bakiye _bakiye = new Bakiye();
 
+        // Kullanıcı stokları oluşturulan nesne örneklerine aktarılır.
         List<Stok> _stoklar = new List<Stok>();
         Stok _stok = new Stok();
 
-
+        // kullanılacak manager sınıflarının örnekleri olutşurulur.
         BakiyeManager bakiyeManager = new BakiyeManager(new EfBakiyeDal());
         KullaniciManager kullaniciManager = new KullaniciManager(new EfKullaniciDal());
         private StokManager stokManager = new StokManager(new EfStokDal());
@@ -48,7 +51,6 @@ namespace WindowsFormsApp1
         public void kullaniciListele()
         {
             DataGridScreen.DataSource = _kullanicilar;
-            
         }
 
         public void bakiyeGoruntule()
@@ -64,7 +66,8 @@ namespace WindowsFormsApp1
         }
 
         private void btnKullanicilar_Click(object sender, EventArgs e)
-        {
+        {   
+            // kullanıcılar butonuna basıldığında kullanıcılar groupboxu görünür olur, diğer groupboxlar görünmez olur.
             grpStokOnay.Visible = false;
             grpBakiyeOnay.Visible = false;
             kullaniciListele();
@@ -74,6 +77,7 @@ namespace WindowsFormsApp1
 
         private void btnStok_Click(object sender, EventArgs e)
         {
+            // stoklar butonuna basıldığında stoklar groupboxu görünür olur, diğer groupboxlar görünmez olur.
             grpBakiyeOnay.Visible = false;
             grpStokOnay.Visible = true;
             stokGoruntule();
@@ -82,6 +86,7 @@ namespace WindowsFormsApp1
 
         private void btnBakiye_Click_1(object sender, EventArgs e)
         {
+            // bakiyeler butonuna basıldığında bakiyeler groupboxu görünür olur, diğer groupboxlar görünmez olur.
             grpStokOnay.Visible = false;
             grpBakiyeOnay.Visible = true;
             bakiyeGoruntule();
@@ -94,6 +99,7 @@ namespace WindowsFormsApp1
         private void DataGridScreen_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
+            //datagridde bakiyeler görüntüleniyor ise ilgili değerler ilgili nesnelere gönderilir.
             if (DataGridScreen.DataSource == _bakiyeler)
             {
                 int secilen = DataGridScreen.SelectedCells[0].RowIndex;
@@ -107,6 +113,7 @@ namespace WindowsFormsApp1
                 lblKullaniciAdi.Text = _kullanici.Ad + " " + _kullanici.Soyad;
             }
 
+            //datagridde stoklar görüntüleniyor ise ilgili değerler ilgili nesnelere gönderilir.
             else if (DataGridScreen.DataSource == _stoklar)
             {
                 int secilen = DataGridScreen.SelectedCells[0].RowIndex;
@@ -127,6 +134,7 @@ namespace WindowsFormsApp1
 
         private void btnBakiyeOnayla_Click(object sender, EventArgs e)
         {
+            // bakiye onayla butonuna tıklandığında bakiye güncelleme işlemi gerçekleştirilir.
             _bakiye.MevcutBakiye += _bakiye.EklenecekBakiye;
             _bakiye.EklenecekBakiye = 0;
             _bakiye.BakiyeOnay = true;
@@ -135,6 +143,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(_kullanici.Ad + " " + _kullanici.Soyad + " kullanıcısının bakiye ekleme işlemi onaylandı");
             }
+            // işlem gerçekleşmez ise admine işlem onaylanamadı mesajı döndürülür.
             else
             {
                 MessageBox.Show("İşlem onaylanamadı");
@@ -145,12 +154,14 @@ namespace WindowsFormsApp1
 
         private void btnStokOnayla_Click(object sender, EventArgs e)
         {
+            // stok onayla butonuna basıldığında ilgili stok güncellenir.
             _stok.UrunOnay = true;
             var result = stokManager.Update(_stok);
             if (result)
             {
                 MessageBox.Show(_kullanici.Ad + " " + _kullanici.Soyad + " kullanıcısının stok ekleme işlemi onaylandı");
             }
+            // işlem gerçekleşmez ise admine işlem onaylanamadı mesajı döndürülür.
             else
             {
                 MessageBox.Show("İşlem onaylanamadı");
