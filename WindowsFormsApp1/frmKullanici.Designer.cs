@@ -124,7 +124,8 @@ namespace WindowsFormsApp1
             this.btnBakiyeEkle.BackColor = System.Drawing.Color.Transparent;
             this.btnBakiyeEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBakiyeEkle.BackgroundImage")));
             this.btnBakiyeEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBakiyeEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBakiyeEkle.FlatAppearance.BorderSize = 0;
+            this.btnBakiyeEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBakiyeEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBakiyeEkle.ForeColor = System.Drawing.Color.White;
             this.btnBakiyeEkle.Location = new System.Drawing.Point(350, 126);
@@ -251,7 +252,8 @@ namespace WindowsFormsApp1
             this.btnDataGridYenile.BackColor = System.Drawing.Color.Transparent;
             this.btnDataGridYenile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDataGridYenile.BackgroundImage")));
             this.btnDataGridYenile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDataGridYenile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDataGridYenile.FlatAppearance.BorderSize = 0;
+            this.btnDataGridYenile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDataGridYenile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDataGridYenile.ForeColor = System.Drawing.Color.White;
             this.btnDataGridYenile.Location = new System.Drawing.Point(18, 34);
@@ -266,7 +268,8 @@ namespace WindowsFormsApp1
             this.btnUrunEkle.BackColor = System.Drawing.Color.Transparent;
             this.btnUrunEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUrunEkle.BackgroundImage")));
             this.btnUrunEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnUrunEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUrunEkle.FlatAppearance.BorderSize = 0;
+            this.btnUrunEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUrunEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUrunEkle.ForeColor = System.Drawing.Color.White;
             this.btnUrunEkle.Location = new System.Drawing.Point(1132, 24);
@@ -295,14 +298,14 @@ namespace WindowsFormsApp1
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(105)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(105)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(168)))), ((int)(((byte)(37)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
-            this.dataGridView1.Location = new System.Drawing.Point(0, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(-7, 105);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -315,7 +318,8 @@ namespace WindowsFormsApp1
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1228, 263);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1235, 263);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -341,7 +345,8 @@ namespace WindowsFormsApp1
             // 
             this.btnAlis.BackColor = System.Drawing.Color.Transparent;
             this.btnAlis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAlis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAlis.FlatAppearance.BorderSize = 0;
+            this.btnAlis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlis.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAlis.ForeColor = System.Drawing.Color.White;
             this.btnAlis.Image = ((System.Drawing.Image)(resources.GetObject("btnAlis.Image")));
@@ -452,7 +457,8 @@ namespace WindowsFormsApp1
             // btnSatis
             // 
             this.btnSatis.BackColor = System.Drawing.Color.Transparent;
-            this.btnSatis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSatis.FlatAppearance.BorderSize = 0;
+            this.btnSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSatis.ForeColor = System.Drawing.Color.White;
             this.btnSatis.Image = ((System.Drawing.Image)(resources.GetObject("btnSatis.Image")));

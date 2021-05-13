@@ -73,10 +73,12 @@ namespace WindowsFormsApp1
             // 
             // btnGiris
             // 
-            this.btnGiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
+            this.btnGiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(105)))), ((int)(((byte)(136)))));
             this.btnGiris.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnGiris.FlatAppearance.BorderSize = 0;
             this.btnGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGiris.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGiris.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGiris.ForeColor = System.Drawing.Color.White;
             this.btnGiris.Location = new System.Drawing.Point(161, 106);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(139, 40);

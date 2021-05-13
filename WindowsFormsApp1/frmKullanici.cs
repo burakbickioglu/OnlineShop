@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
             _bakiye.KullaniciId = _kullanici.KullaniciId;
             _bakiye = bakiyeManager.Get(_bakiye);
             lblAdSoyad.Text = _kullanici.Ad + " " + _kullanici.Soyad;
-            lblhosgeldin.Text = _kullanici.Ad + " " + _kullanici.Soyad;
+            lblhosgeldin.Text = _kullanici.Ad.ToUpper() + " " + _kullanici.Soyad.ToUpper();
 
             lblBakiye.Text = Math.Round(Convert.ToDecimal(_bakiye.MevcutBakiye), 2) + " TL";
             lblTc.Text = _kullanici.TcNo;

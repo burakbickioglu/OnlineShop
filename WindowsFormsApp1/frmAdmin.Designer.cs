@@ -126,6 +126,7 @@ namespace WindowsFormsApp1
             this.DataGridScreen.Name = "DataGridScreen";
             this.DataGridScreen.RowHeadersVisible = false;
             this.DataGridScreen.RowTemplate.Height = 25;
+            this.DataGridScreen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.DataGridScreen.Size = new System.Drawing.Size(998, 378);
             this.DataGridScreen.TabIndex = 3;
             this.DataGridScreen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridScreen_CellClick);

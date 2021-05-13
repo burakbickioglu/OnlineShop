@@ -36,13 +36,17 @@ namespace WindowsFormsApp1
             // 
             // btnIstekGonder
             // 
-            this.btnIstekGonder.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnIstekGonder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(105)))), ((int)(((byte)(136)))));
+            this.btnIstekGonder.FlatAppearance.BorderSize = 0;
+            this.btnIstekGonder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIstekGonder.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnIstekGonder.ForeColor = System.Drawing.Color.White;
             this.btnIstekGonder.Location = new System.Drawing.Point(88, 59);
             this.btnIstekGonder.Name = "btnIstekGonder";
             this.btnIstekGonder.Size = new System.Drawing.Size(121, 35);
             this.btnIstekGonder.TabIndex = 7;
             this.btnIstekGonder.Text = "İstek Gönder";
-            this.btnIstekGonder.UseVisualStyleBackColor = true;
+            this.btnIstekGonder.UseVisualStyleBackColor = false;
             this.btnIstekGonder.Click += new System.EventHandler(this.btnIstekGonder_Click);
             // 
             // txtTutar
@@ -56,9 +60,10 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 11);
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(20, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 25);
+            this.label2.Size = new System.Drawing.Size(64, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Tutar:";
             // 
@@ -66,12 +71,16 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(168)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(226, 108);
             this.Controls.Add(this.btnIstekGonder);
             this.Controls.Add(this.txtTutar);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmBakiyeEkle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bakiye Ekle";
             this.Load += new System.EventHandler(this.frmBakiyeEkle_Load);
             this.ResumeLayout(false);
