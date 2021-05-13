@@ -12,8 +12,10 @@ using Business.Concrete;
 using DataAccess.Concrete;
 using Entities.Concrete;
 using Entities.DTOs;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1 
 {
     public partial class frmKullanici : Form
     {
@@ -21,6 +23,7 @@ namespace WindowsFormsApp1
         public frmKullanici(Kullanici kullanici)
         {
             _kullanici = kullanici;
+            
             InitializeComponent();
         }
 
@@ -45,6 +48,7 @@ namespace WindowsFormsApp1
             _bakiye.KullaniciId = _kullanici.KullaniciId;
             _bakiye = bakiyeManager.Get(_bakiye);
             lblAdSoyad.Text = _kullanici.Ad + " " + _kullanici.Soyad;
+            lblhosgeldin.Text = _kullanici.Ad + " " + _kullanici.Soyad;
 
             lblBakiye.Text = Math.Round(Convert.ToDecimal(_bakiye.MevcutBakiye), 2) + " TL";
             lblTc.Text = _kullanici.TcNo;
@@ -176,6 +180,19 @@ namespace WindowsFormsApp1
             fr.ShowDialog();
         }
 
-        
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

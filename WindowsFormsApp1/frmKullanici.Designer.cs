@@ -29,9 +29,14 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKullanici));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpKullaniciBilgileri = new System.Windows.Forms.GroupBox();
-            this.btnBakiyeEkle = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTc = new System.Windows.Forms.Label();
+            this.btnBakiyeEkle = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,6 +44,7 @@ namespace WindowsFormsApp1
             this.lblAdSoyad = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDataGridYenile = new System.Windows.Forms.Button();
             this.btnUrunEkle = new System.Windows.Forms.Button();
@@ -58,17 +64,23 @@ namespace WindowsFormsApp1
             this.txtSatilacakMiktar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblhosgeldin = new System.Windows.Forms.Label();
             this.grpKullaniciBilgileri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpKullaniciBilgileri
             // 
-            this.grpKullaniciBilgileri.Controls.Add(this.btnBakiyeEkle);
+            this.grpKullaniciBilgileri.BackColor = System.Drawing.Color.Transparent;
+            this.grpKullaniciBilgileri.Controls.Add(this.pictureBox1);
             this.grpKullaniciBilgileri.Controls.Add(this.lblTc);
+            this.grpKullaniciBilgileri.Controls.Add(this.btnBakiyeEkle);
             this.grpKullaniciBilgileri.Controls.Add(this.label5);
             this.grpKullaniciBilgileri.Controls.Add(this.lblTel);
             this.grpKullaniciBilgileri.Controls.Add(this.label4);
@@ -76,46 +88,71 @@ namespace WindowsFormsApp1
             this.grpKullaniciBilgileri.Controls.Add(this.lblAdSoyad);
             this.grpKullaniciBilgileri.Controls.Add(this.label2);
             this.grpKullaniciBilgileri.Controls.Add(this.label1);
-            this.grpKullaniciBilgileri.Location = new System.Drawing.Point(12, 12);
+            this.grpKullaniciBilgileri.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.grpKullaniciBilgileri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.grpKullaniciBilgileri.Location = new System.Drawing.Point(12, 70);
             this.grpKullaniciBilgileri.Name = "grpKullaniciBilgileri";
-            this.grpKullaniciBilgileri.Size = new System.Drawing.Size(260, 225);
+            this.grpKullaniciBilgileri.Size = new System.Drawing.Size(417, 180);
             this.grpKullaniciBilgileri.TabIndex = 0;
             this.grpKullaniciBilgileri.TabStop = false;
             this.grpKullaniciBilgileri.Text = "Kullanıcı Bilgileri";
             // 
-            // btnBakiyeEkle
+            // pictureBox1
             // 
-            this.btnBakiyeEkle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnBakiyeEkle.Location = new System.Drawing.Point(24, 169);
-            this.btnBakiyeEkle.Name = "btnBakiyeEkle";
-            this.btnBakiyeEkle.Size = new System.Drawing.Size(104, 29);
-            this.btnBakiyeEkle.TabIndex = 2;
-            this.btnBakiyeEkle.Text = "Bakiye Ekle";
-            this.btnBakiyeEkle.UseVisualStyleBackColor = true;
-            this.btnBakiyeEkle.Click += new System.EventHandler(this.btnBakiyeEkle_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 145);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // lblTc
             // 
             this.lblTc.AutoSize = true;
-            this.lblTc.Location = new System.Drawing.Point(98, 107);
+            this.lblTc.BackColor = System.Drawing.Color.Transparent;
+            this.lblTc.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTc.ForeColor = System.Drawing.Color.Black;
+            this.lblTc.Location = new System.Drawing.Point(241, 79);
             this.lblTc.Name = "lblTc";
             this.lblTc.Size = new System.Drawing.Size(52, 25);
             this.lblTc.TabIndex = 8;
             this.lblTc.Text = "0000";
             // 
+            // btnBakiyeEkle
+            // 
+            this.btnBakiyeEkle.BackColor = System.Drawing.Color.Transparent;
+            this.btnBakiyeEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBakiyeEkle.BackgroundImage")));
+            this.btnBakiyeEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBakiyeEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBakiyeEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBakiyeEkle.ForeColor = System.Drawing.Color.White;
+            this.btnBakiyeEkle.Location = new System.Drawing.Point(350, 126);
+            this.btnBakiyeEkle.Name = "btnBakiyeEkle";
+            this.btnBakiyeEkle.Size = new System.Drawing.Size(61, 48);
+            this.btnBakiyeEkle.TabIndex = 2;
+            this.btnBakiyeEkle.UseVisualStyleBackColor = false;
+            this.btnBakiyeEkle.Click += new System.EventHandler(this.btnBakiyeEkle_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(61, 107);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.label5.Location = new System.Drawing.Point(144, 79);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 25);
+            this.label5.Size = new System.Drawing.Size(35, 25);
             this.label5.TabIndex = 7;
             this.label5.Text = "Tc:";
             // 
             // lblTel
             // 
             this.lblTel.AutoSize = true;
-            this.lblTel.Location = new System.Drawing.Point(98, 73);
+            this.lblTel.BackColor = System.Drawing.Color.Transparent;
+            this.lblTel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTel.ForeColor = System.Drawing.Color.Black;
+            this.lblTel.Location = new System.Drawing.Point(242, 54);
             this.lblTel.Name = "lblTel";
             this.lblTel.Size = new System.Drawing.Size(52, 25);
             this.lblTel.TabIndex = 6;
@@ -124,16 +161,22 @@ namespace WindowsFormsApp1
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 73);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.label4.Location = new System.Drawing.Point(144, 54);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 25);
+            this.label4.Size = new System.Drawing.Size(87, 25);
             this.label4.TabIndex = 5;
             this.label4.Text = "Telefon: ";
             // 
             // lblBakiye
             // 
             this.lblBakiye.AutoSize = true;
-            this.lblBakiye.Location = new System.Drawing.Point(98, 141);
+            this.lblBakiye.BackColor = System.Drawing.Color.Transparent;
+            this.lblBakiye.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBakiye.ForeColor = System.Drawing.Color.Black;
+            this.lblBakiye.Location = new System.Drawing.Point(242, 104);
             this.lblBakiye.Name = "lblBakiye";
             this.lblBakiye.Size = new System.Drawing.Size(30, 25);
             this.lblBakiye.TabIndex = 3;
@@ -142,7 +185,10 @@ namespace WindowsFormsApp1
             // lblAdSoyad
             // 
             this.lblAdSoyad.AutoSize = true;
-            this.lblAdSoyad.Location = new System.Drawing.Point(98, 39);
+            this.lblAdSoyad.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdSoyad.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAdSoyad.ForeColor = System.Drawing.Color.Black;
+            this.lblAdSoyad.Location = new System.Drawing.Point(242, 29);
             this.lblAdSoyad.Name = "lblAdSoyad";
             this.lblAdSoyad.Size = new System.Drawing.Size(108, 25);
             this.lblAdSoyad.TabIndex = 2;
@@ -151,95 +197,166 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 141);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.label2.Location = new System.Drawing.Point(144, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 25);
+            this.label2.Size = new System.Drawing.Size(75, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Bakiye:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 39);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.label1.Location = new System.Drawing.Point(144, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 25);
+            this.label1.Size = new System.Drawing.Size(102, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ad Soyad:";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(18, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(150, 32);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "HOŞGELDİN";
+            // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnDataGridYenile);
             this.groupBox1.Controls.Add(this.btnUrunEkle);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 243);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.groupBox1.Location = new System.Drawing.Point(0, 256);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(778, 358);
+            this.groupBox1.Size = new System.Drawing.Size(1228, 368);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stoktaki Ürünleriniz";
             // 
             // btnDataGridYenile
             // 
-            this.btnDataGridYenile.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDataGridYenile.Location = new System.Drawing.Point(6, 28);
+            this.btnDataGridYenile.BackColor = System.Drawing.Color.Transparent;
+            this.btnDataGridYenile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDataGridYenile.BackgroundImage")));
+            this.btnDataGridYenile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDataGridYenile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDataGridYenile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDataGridYenile.ForeColor = System.Drawing.Color.White;
+            this.btnDataGridYenile.Location = new System.Drawing.Point(6, 34);
             this.btnDataGridYenile.Name = "btnDataGridYenile";
-            this.btnDataGridYenile.Size = new System.Drawing.Size(75, 23);
+            this.btnDataGridYenile.Size = new System.Drawing.Size(53, 52);
             this.btnDataGridYenile.TabIndex = 2;
-            this.btnDataGridYenile.Text = "Yenile";
-            this.btnDataGridYenile.UseVisualStyleBackColor = true;
+            this.btnDataGridYenile.UseVisualStyleBackColor = false;
             this.btnDataGridYenile.Click += new System.EventHandler(this.btnDataGridYenile_Click);
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnUrunEkle.Location = new System.Drawing.Point(613, 22);
+            this.btnUrunEkle.BackColor = System.Drawing.Color.Transparent;
+            this.btnUrunEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUrunEkle.BackgroundImage")));
+            this.btnUrunEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnUrunEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUrunEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUrunEkle.ForeColor = System.Drawing.Color.White;
+            this.btnUrunEkle.Location = new System.Drawing.Point(1147, 23);
             this.btnUrunEkle.Name = "btnUrunEkle";
-            this.btnUrunEkle.Size = new System.Drawing.Size(159, 29);
+            this.btnUrunEkle.Size = new System.Drawing.Size(75, 75);
             this.btnUrunEkle.TabIndex = 1;
-            this.btnUrunEkle.Text = "Ürün Ekle";
-            this.btnUrunEkle.UseVisualStyleBackColor = true;
+            this.btnUrunEkle.UseVisualStyleBackColor = false;
             this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(168)))), ((int)(((byte)(37)))));
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(168)))), ((int)(((byte)(37)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(168)))), ((int)(((byte)(37)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 57);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(105)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(105)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(168)))), ((int)(((byte)(37)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            this.dataGridView1.Location = new System.Drawing.Point(0, 105);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(168)))), ((int)(((byte)(37)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(168)))), ((int)(((byte)(37)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(772, 298);
+            this.dataGridView1.Size = new System.Drawing.Size(1228, 263);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.btnAlis);
             this.groupBox2.Controls.Add(this.txtAlinacakMiktar);
             this.groupBox2.Controls.Add(this.cmbAlinacakUrun);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Location = new System.Drawing.Point(295, 12);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.groupBox2.Location = new System.Drawing.Point(435, 70);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(236, 225);
+            this.groupBox2.Size = new System.Drawing.Size(365, 180);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Alış Emri";
             // 
             // btnAlis
             // 
-            this.btnAlis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlis.Location = new System.Drawing.Point(83, 129);
+            this.btnAlis.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAlis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAlis.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAlis.ForeColor = System.Drawing.Color.White;
+            this.btnAlis.Image = ((System.Drawing.Image)(resources.GetObject("btnAlis.Image")));
+            this.btnAlis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlis.Location = new System.Drawing.Point(220, 18);
             this.btnAlis.Name = "btnAlis";
-            this.btnAlis.Size = new System.Drawing.Size(133, 37);
+            this.btnAlis.Size = new System.Drawing.Size(139, 142);
             this.btnAlis.TabIndex = 4;
-            this.btnAlis.Text = "Alım Emri";
-            this.btnAlis.UseVisualStyleBackColor = true;
+            this.btnAlis.UseVisualStyleBackColor = false;
             this.btnAlis.Click += new System.EventHandler(this.btnAlis_Click);
             // 
             // txtAlinacakMiktar
             // 
             this.txtAlinacakMiktar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAlinacakMiktar.Location = new System.Drawing.Point(83, 78);
+            this.txtAlinacakMiktar.Location = new System.Drawing.Point(81, 70);
             this.txtAlinacakMiktar.Name = "txtAlinacakMiktar";
             this.txtAlinacakMiktar.Size = new System.Drawing.Size(133, 29);
             this.txtAlinacakMiktar.TabIndex = 7;
@@ -248,7 +365,7 @@ namespace WindowsFormsApp1
             // 
             this.cmbAlinacakUrun.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbAlinacakUrun.FormattingEnabled = true;
-            this.cmbAlinacakUrun.Location = new System.Drawing.Point(83, 39);
+            this.cmbAlinacakUrun.Location = new System.Drawing.Point(81, 35);
             this.cmbAlinacakUrun.Name = "cmbAlinacakUrun";
             this.cmbAlinacakUrun.Size = new System.Drawing.Size(133, 29);
             this.cmbAlinacakUrun.TabIndex = 6;
@@ -256,23 +373,30 @@ namespace WindowsFormsApp1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 77);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.label6.Location = new System.Drawing.Point(5, 69);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 25);
+            this.label6.Size = new System.Drawing.Size(77, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Miktar:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 39);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.label3.Location = new System.Drawing.Point(17, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 25);
+            this.label3.Size = new System.Drawing.Size(63, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ürün:";
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.txtBirimFiyat);
             this.groupBox3.Controls.Add(this.label9);
@@ -282,9 +406,11 @@ namespace WindowsFormsApp1
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.Location = new System.Drawing.Point(554, 12);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.groupBox3.Location = new System.Drawing.Point(806, 70);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(236, 225);
+            this.groupBox3.Size = new System.Drawing.Size(412, 180);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Satış Emri";
@@ -292,17 +418,20 @@ namespace WindowsFormsApp1
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Location = new System.Drawing.Point(20, 135);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.label10.Location = new System.Drawing.Point(64, 105);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 25);
+            this.label10.Size = new System.Drawing.Size(59, 25);
             this.label10.TabIndex = 15;
             this.label10.Text = "Fiyat:";
             // 
             // txtBirimFiyat
             // 
             this.txtBirimFiyat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBirimFiyat.Location = new System.Drawing.Point(84, 125);
+            this.txtBirimFiyat.Location = new System.Drawing.Point(124, 104);
             this.txtBirimFiyat.Name = "txtBirimFiyat";
             this.txtBirimFiyat.Size = new System.Drawing.Size(133, 29);
             this.txtBirimFiyat.TabIndex = 14;
@@ -310,30 +439,35 @@ namespace WindowsFormsApp1
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Location = new System.Drawing.Point(17, 110);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.label9.Location = new System.Drawing.Point(8, 105);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 25);
+            this.label9.Size = new System.Drawing.Size(59, 25);
             this.label9.TabIndex = 13;
             this.label9.Text = "Birim";
             // 
             // btnSatis
             // 
-            this.btnSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSatis.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSatis.Location = new System.Drawing.Point(84, 175);
+            this.btnSatis.BackColor = System.Drawing.Color.Transparent;
+            this.btnSatis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSatis.ForeColor = System.Drawing.Color.White;
+            this.btnSatis.Image = ((System.Drawing.Image)(resources.GetObject("btnSatis.Image")));
+            this.btnSatis.Location = new System.Drawing.Point(262, 23);
             this.btnSatis.Name = "btnSatis";
-            this.btnSatis.Size = new System.Drawing.Size(133, 37);
+            this.btnSatis.Size = new System.Drawing.Size(139, 142);
             this.btnSatis.TabIndex = 8;
-            this.btnSatis.Text = "Satış Emri";
-            this.btnSatis.UseVisualStyleBackColor = true;
+            this.btnSatis.UseVisualStyleBackColor = false;
             this.btnSatis.Click += new System.EventHandler(this.btnSatis_Click);
             // 
             // cmbSatilacakUrun
             // 
             this.cmbSatilacakUrun.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbSatilacakUrun.FormattingEnabled = true;
-            this.cmbSatilacakUrun.Location = new System.Drawing.Point(84, 39);
+            this.cmbSatilacakUrun.Location = new System.Drawing.Point(124, 31);
             this.cmbSatilacakUrun.Name = "cmbSatilacakUrun";
             this.cmbSatilacakUrun.Size = new System.Drawing.Size(133, 29);
             this.cmbSatilacakUrun.TabIndex = 11;
@@ -341,7 +475,7 @@ namespace WindowsFormsApp1
             // txtSatilacakMiktar
             // 
             this.txtSatilacakMiktar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSatilacakMiktar.Location = new System.Drawing.Point(84, 80);
+            this.txtSatilacakMiktar.Location = new System.Drawing.Point(124, 69);
             this.txtSatilacakMiktar.Name = "txtSatilacakMiktar";
             this.txtSatilacakMiktar.Size = new System.Drawing.Size(133, 29);
             this.txtSatilacakMiktar.TabIndex = 12;
@@ -349,49 +483,83 @@ namespace WindowsFormsApp1
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Location = new System.Drawing.Point(20, 39);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.label8.Location = new System.Drawing.Point(60, 34);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 25);
+            this.label8.Size = new System.Drawing.Size(63, 25);
             this.label8.TabIndex = 9;
             this.label8.Text = "Ürün:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Location = new System.Drawing.Point(8, 79);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.label7.Location = new System.Drawing.Point(46, 68);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 25);
+            this.label7.Size = new System.Drawing.Size(77, 25);
             this.label7.TabIndex = 10;
             this.label7.Text = "Miktar:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(105)))), ((int)(((byte)(136)))));
+            this.panel1.Controls.Add(this.lblhosgeldin);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1228, 64);
+            this.panel1.TabIndex = 4;
+            // 
+            // lblhosgeldin
+            // 
+            this.lblhosgeldin.AutoSize = true;
+            this.lblhosgeldin.BackColor = System.Drawing.Color.Transparent;
+            this.lblhosgeldin.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblhosgeldin.ForeColor = System.Drawing.Color.White;
+            this.lblhosgeldin.Location = new System.Drawing.Point(199, 17);
+            this.lblhosgeldin.Name = "lblhosgeldin";
+            this.lblhosgeldin.Size = new System.Drawing.Size(150, 32);
+            this.lblhosgeldin.TabIndex = 22;
+            this.lblhosgeldin.Text = "HOŞGELDİN";
             // 
             // frmKullanici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 613);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1224, 620);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpKullaniciBilgileri);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmKullanici";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Formu";
-            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmKullanici_FormClosed);
             this.Load += new System.EventHandler(this.frmKullanici_Load);
             this.grpKullaniciBilgileri.ResumeLayout(false);
             this.grpKullaniciBilgileri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -399,16 +567,7 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.GroupBox grpKullaniciBilgileri;
-        private System.Windows.Forms.Label lblBakiye;
-        private System.Windows.Forms.Label lblAdSoyad;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblTc;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblTel;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnAlis;
@@ -424,8 +583,21 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox txtSatilacakMiktar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnBakiyeEkle;
         private System.Windows.Forms.Button btnUrunEkle;
         private System.Windows.Forms.Button btnDataGridYenile;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTc;
+        private System.Windows.Forms.Button btnBakiyeEkle;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblBakiye;
+        private System.Windows.Forms.Label lblAdSoyad;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblhosgeldin;
     }
 }
