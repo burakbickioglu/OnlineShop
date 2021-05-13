@@ -254,7 +254,7 @@ namespace WindowsFormsApp1
             this.btnDataGridYenile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDataGridYenile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDataGridYenile.ForeColor = System.Drawing.Color.White;
-            this.btnDataGridYenile.Location = new System.Drawing.Point(6, 34);
+            this.btnDataGridYenile.Location = new System.Drawing.Point(18, 34);
             this.btnDataGridYenile.Name = "btnDataGridYenile";
             this.btnDataGridYenile.Size = new System.Drawing.Size(53, 52);
             this.btnDataGridYenile.TabIndex = 2;
@@ -269,7 +269,7 @@ namespace WindowsFormsApp1
             this.btnUrunEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUrunEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUrunEkle.ForeColor = System.Drawing.Color.White;
-            this.btnUrunEkle.Location = new System.Drawing.Point(1147, 23);
+            this.btnUrunEkle.Location = new System.Drawing.Point(1132, 24);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(75, 75);
             this.btnUrunEkle.TabIndex = 1;
