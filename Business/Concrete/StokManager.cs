@@ -42,7 +42,7 @@ namespace Business.Concrete
         {
             return _stokDal.Update(entity);
         }
-
+           
         //  alınan parametre nesnesinin veritabanından silinmesi için ilgili managerin delete metodu çağrılır
         public bool Delete(Stok entity)
         {
