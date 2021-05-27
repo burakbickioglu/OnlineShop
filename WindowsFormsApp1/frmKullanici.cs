@@ -100,6 +100,7 @@ namespace WindowsFormsApp1
             alisEmir.AliciId = _kullanici.KullaniciId;
             alisEmir.UrunId = urunManager.Get(new Urun { UrunAd = cmbAlinacakUrun.Text }).UrunId;
             alisEmir.Miktar = Convert.ToInt16(txtAlinacakMiktar.Text);
+            alisEmir.TeklifFiyat = Convert.ToInt16(txtBirimTeklif.Text);
             alisEmir.Durum = false;
             var result = alisManager.Add(alisEmir);
             if (result)

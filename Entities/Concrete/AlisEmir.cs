@@ -13,6 +13,7 @@ namespace Entities.Concrete
         public int AliciId { get; set; }
         public int UrunId { get; set; }
         public int Miktar { get; set; }
+        public decimal TeklifFiyat { get; set; }
         public bool Durum { get; set; }
 
     }

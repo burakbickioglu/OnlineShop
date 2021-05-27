@@ -52,9 +52,12 @@ namespace Alghoritm
                     alici = kullaniManager.getById(new Kullanici { KullaniciId = mevcutalici.AliciId });
                     aliciBakiye = bakiyeManager.Get(new Bakiye { KullaniciId = mevcutalici.AliciId });
 
+                    bool uygunUrunKontrol = true;
+
                     // alıcının alacağı ürün olduğu sürece while döngüsü dönüyor
-                    while (mevcutalici.Miktar > 0 && toplamsatilanstok != 0)
+                    while (mevcutalici.Miktar > 0 && toplamsatilanstok != 0 && uygunUrunKontrol)
                     {
+                        
                         // her ilan için aşağıdaki foreach döngüsü dönüyor
                         foreach (var gecerliIlan in tumIlanlar)
                         {
@@ -66,8 +69,14 @@ namespace Alghoritm
                             saticiBakiye = bakiyeManager.Get(new Bakiye { KullaniciId = gecerliIlan.SaticiId });
                             AlimSatim alimSatim = new AlimSatim();
 
+                            // eğer alıcının verdiği teklife uygun bir satış emri yok ise 
+                            if (mevcutalici.TeklifFiyat < gecerliIlan.BirimFiyat)
+                            {
+                                uygunUrunKontrol = false;
+                            }
+
                             // eğer alıcının bakiyesi geçerli ilanın toplam fiyatından büyükse ve alıcıyla satıcı aynı kişi değilse aşağıdaki if şartına giriliyor
-                            if (aliciBakiye.MevcutBakiye >= (gecerliIlan.Miktar * gecerliIlan.BirimFiyat) && alici.KullaniciId != gecerliIlan.SaticiId && gecerliIlan.Durum == false)
+                            if (aliciBakiye.MevcutBakiye >= (gecerliIlan.Miktar * gecerliIlan.BirimFiyat) && alici.KullaniciId != gecerliIlan.SaticiId && gecerliIlan.Durum == false && uygunUrunKontrol)
                             {
                                 int alinanmiktar;
                                 // eğer alıcının alacağı miktar geçerli ilanın miktarından fazla ise aşağıdaki döngü çalışır
