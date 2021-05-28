@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Business.Concrete;
+using Core.Utils.XmlKur;
 using DataAccess.Concrete;
 using Entities.Concrete;
 
@@ -34,7 +36,8 @@ namespace WindowsFormsApp1
         // kullanılacak manager sınıflarının örnekleri olutşurulur.
         BakiyeManager bakiyeManager = new BakiyeManager(new EfBakiyeDal());
         KullaniciManager kullaniciManager = new KullaniciManager(new EfKullaniciDal());
-        private StokManager stokManager = new StokManager(new EfStokDal());
+        StokManager stokManager = new StokManager(new EfStokDal());
+        DovizManager dovizManager = new DovizManager(new EfDovizDal());
 
         private void frmAdmin_Load(object sender, EventArgs e)
         {
@@ -106,7 +109,8 @@ namespace WindowsFormsApp1
                 _bakiye.KullaniciId = Convert.ToInt16(DataGridScreen.Rows[secilen].Cells[0].Value);
                 _bakiye.MevcutBakiye = Convert.ToDecimal(DataGridScreen.Rows[secilen].Cells[1].Value);
                 _bakiye.EklenecekBakiye = Convert.ToDecimal(DataGridScreen.Rows[secilen].Cells[2].Value);
-                _bakiye.BakiyeOnay = Convert.ToBoolean(DataGridScreen.Rows[secilen].Cells[3].Value);
+                _bakiye.DovizId = Convert.ToInt16(DataGridScreen.Rows[secilen].Cells[3].Value);
+                _bakiye.BakiyeOnay = Convert.ToBoolean(DataGridScreen.Rows[secilen].Cells[4].Value);
                 lblEklenecekBakiye.Text = _bakiye.EklenecekBakiye.ToString();
                 _kullanici.KullaniciId = Convert.ToInt16(DataGridScreen.Rows[secilen].Cells[0].Value);
                 _kullanici = kullaniciManager.GetAll().FirstOrDefault(p=>p.KullaniciId==_kullanici.KullaniciId);
@@ -134,11 +138,35 @@ namespace WindowsFormsApp1
 
         private void btnBakiyeOnayla_Click(object sender, EventArgs e)
         {
-            // bakiye onayla butonuna tıklandığında bakiye güncelleme işlemi gerçekleştirilir.
-            _bakiye.MevcutBakiye += _bakiye.EklenecekBakiye;
+            var result = false;
+
+            if (_bakiye.DovizId == dovizManager.GetByName("TL").DovizId)
+            {
+                // tl bakiye ekleme işlemleri
+
+                _bakiye.MevcutBakiye += _bakiye.EklenecekBakiye;
+            }
+            else 
+            {
+                // diğer kurlar
+
+                kurManager kurmanager = new kurManager();
+                string dovizKur = kurmanager.kurGetir(dovizManager.Get(new Doviz { DovizId = _bakiye.DovizId }).DovizAd);
+                
+                
+                
+
+                
+                _bakiye.MevcutBakiye += (_bakiye.EklenecekBakiye * decimal.Parse(dovizKur.Replace(".", ",")));
+                MessageBox.Show(_bakiye.MevcutBakiye.ToString());
+
+            }
             _bakiye.EklenecekBakiye = 0;
             _bakiye.BakiyeOnay = true;
-            var result = bakiyeManager.Update(_bakiye);
+            result = bakiyeManager.Update(_bakiye);
+
+            // bakiye onayla butonuna tıklandığında bakiye güncelleme işlemi gerçekleştirilir.
+
             if (result)
             {
                 MessageBox.Show(_kullanici.Ad + " " + _kullanici.Soyad + " kullanıcısının bakiye ekleme işlemi onaylandı");

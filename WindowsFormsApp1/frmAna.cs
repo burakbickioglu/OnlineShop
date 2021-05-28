@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business.Concrete;
+using Core.Utils.XmlKur;
 using DataAccess.Concrete;
 using Entities.Concrete;
 
@@ -22,7 +23,8 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
+            
         }
 
 

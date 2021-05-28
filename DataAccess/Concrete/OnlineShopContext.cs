@@ -20,6 +20,7 @@ namespace DataAccess.Concrete
         public DbSet<Bakiye> tblBakiye { get; set; }
         public DbSet<Ilan> tblIlan { get; set; }
         public DbSet<AlisEmir> tblAlimEmri { get; set; }
+        public DbSet<Doviz> tblDoviz { get; set; }
 
     }
 }

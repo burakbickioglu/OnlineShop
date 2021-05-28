@@ -12,6 +12,7 @@ namespace Entities.Concrete
         public int? KullaniciId { get; set; }
         public decimal? MevcutBakiye { get; set; }
         public decimal? EklenecekBakiye { get; set; }
+        public int DovizId { get; set; }
         public bool? BakiyeOnay { get; set; }
 
     }

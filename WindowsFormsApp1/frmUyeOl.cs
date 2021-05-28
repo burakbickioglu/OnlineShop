@@ -47,6 +47,7 @@ namespace WindowsFormsApp1
             bakiye.KullaniciId = kullaniciManager.Get(kullanici).KullaniciId;
             bakiye.MevcutBakiye = 0;
             bakiye.EklenecekBakiye = 0;
+            bakiye.DovizId = 1;
             bakiye.BakiyeOnay = true;
             var result2 = bakiyeManager.Add(bakiye);
 
