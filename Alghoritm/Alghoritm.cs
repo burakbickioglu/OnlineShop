@@ -17,10 +17,10 @@ namespace Alghoritm
             List<Ilan> tumIlanlar = new List<Ilan>();
             List<AlisEmir> alicilar = new List<AlisEmir>();
             Kullanici alici = new Kullanici();
-            Kullanici satici = new Kullanici();
             Bakiye aliciBakiye = new Bakiye();
             Bakiye saticiBakiye = new Bakiye();
             Stok aliciStok = new Stok();
+            Admin admin = new Admin();
 
             // Kullanılacak manager nesneler ilgili sınıflardan türetildi
             IlanManager ilanManager = new IlanManager(new EfIlanDal());
@@ -29,9 +29,14 @@ namespace Alghoritm
             BakiyeManager bakiyeManager = new BakiyeManager(new EfBakiyeDal());
             StokManager stokManager = new StokManager(new EfStokDal());
             AlimSatimManager alimSatimManager = new AlimSatimManager(new EfAlimSatimDal());
+            AdminManager adminManager = new AdminManager(new EfAdminDal());
 
             // tüm alıcılar veritabanından bir listeye çekildi
             alicilar = alisEmirManager.GetAll().Where(p => p.Durum == false).ToList();
+
+            // admin bilgisi çekildi
+            admin = adminManager.Get(new Admin {AdminId = 1});
+
             // alıcı varsa aşağıdaki if şartına girilir, yok ise algoritma yorulmaz, çıkılır
             if (alicilar.Count != 0)
             {
@@ -75,8 +80,9 @@ namespace Alghoritm
                                 uygunUrunKontrol = false;
                             }
 
+                            decimal adminYuzdesi = 0.01m;
                             // eğer alıcının bakiyesi geçerli ilanın toplam fiyatından büyükse ve alıcıyla satıcı aynı kişi değilse aşağıdaki if şartına giriliyor
-                            if (aliciBakiye.MevcutBakiye >= (gecerliIlan.Miktar * gecerliIlan.BirimFiyat) && alici.KullaniciId != gecerliIlan.SaticiId && gecerliIlan.Durum == false && uygunUrunKontrol)
+                            if (aliciBakiye.MevcutBakiye >= ((gecerliIlan.Miktar * gecerliIlan.BirimFiyat)*(1.01m)) && alici.KullaniciId != gecerliIlan.SaticiId && gecerliIlan.Durum == false && uygunUrunKontrol)
                             {
                                 int alinanmiktar;
                                 // eğer alıcının alacağı miktar geçerli ilanın miktarından fazla ise aşağıdaki döngü çalışır
@@ -87,6 +93,8 @@ namespace Alghoritm
                                     toplamsatilanstok -= gecerliIlan.Miktar;
                                     mevcutalici.Miktar -= alinanmiktar;
                                     aliciBakiye.MevcutBakiye -= (alinanmiktar * gecerliIlan.BirimFiyat);
+                                    aliciBakiye.MevcutBakiye -= (alinanmiktar * gecerliIlan.BirimFiyat) * adminYuzdesi;
+                                    admin.Bakiye += (alinanmiktar * gecerliIlan.BirimFiyat) * adminYuzdesi;
                                     saticiBakiye.MevcutBakiye += (alinanmiktar * gecerliIlan.BirimFiyat);
                                     aliciStok.UrunMiktar += alinanmiktar;
                                     aliciStok.UrunOnay = true;
@@ -99,7 +107,13 @@ namespace Alghoritm
                                         mevcutalici.Durum = true;
                                     }
 
+
                                     alimSatim.Miktar = alinanmiktar;
+
+                                    // admin bakiyesi güncellenir
+                                    adminManager.Update(admin);
+
+
                                     // alıcı ve satıcının bakiye ve stok bilgileri, ilgili ilan ve alım emirleri güncellenir
                                     bakiyeManager.Update(aliciBakiye);
                                     bakiyeManager.Update(saticiBakiye);
@@ -125,13 +139,20 @@ namespace Alghoritm
                                     toplamsatilanstok -= mevcutalici.Miktar;
                                     gecerliIlan.Miktar -= alinanmiktar;
                                     aliciBakiye.MevcutBakiye -= (alinanmiktar * gecerliIlan.BirimFiyat);
+                                    aliciBakiye.MevcutBakiye -= (alinanmiktar * gecerliIlan.BirimFiyat) * adminYuzdesi;
+                                    admin.Bakiye += (alinanmiktar * gecerliIlan.BirimFiyat) * adminYuzdesi;
                                     saticiBakiye.MevcutBakiye += (alinanmiktar * gecerliIlan.BirimFiyat);
                                     aliciStok.UrunMiktar += alinanmiktar;
                                     aliciStok.UrunOnay = true;
                                     mevcutalici.Miktar = 0;
                                     mevcutalici.Durum = true;
 
+
                                     alimSatim.Miktar = alinanmiktar;
+
+                                    // admin bakiyesi güncellenir
+                                    adminManager.Update(admin);
+
 
                                     // alıcı ve satıcının bakiye ve stok bilgileri, ilgili ilan ve alım emirleri güncellenir
                                     bakiyeManager.Update(aliciBakiye);

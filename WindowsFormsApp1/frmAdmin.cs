@@ -16,9 +16,12 @@ namespace WindowsFormsApp1
 {
     public partial class frmAdmin : Form
     {
-        public frmAdmin()
+        private Admin _admin;
+        public frmAdmin(Admin admin)
         {
+            _admin = admin;
             InitializeComponent();
+
         }
 
         // Kullanıcı bilgileri oluşturulan nesne örneklerine aktarılır.
@@ -41,6 +44,8 @@ namespace WindowsFormsApp1
 
         private void frmAdmin_Load(object sender, EventArgs e)
         {
+            lblAdminKullaniciAd.Text = _admin.KullaniciAd;
+            lblAdminBakiye.Text = Math.Round(Convert.ToDecimal(_admin.Bakiye), 2) + " TL";
             grpBakiyeOnay.Visible = false;
             grpStokOnay.Visible = false;
             KullaniciManager kullaniciManager = new KullaniciManager(new EfKullaniciDal());
@@ -152,10 +157,6 @@ namespace WindowsFormsApp1
 
                 kurManager kurmanager = new kurManager();
                 string dovizKur = kurmanager.kurGetir(dovizManager.Get(new Doviz { DovizId = _bakiye.DovizId }).DovizAd);
-                
-                
-                
-
                 
                 _bakiye.MevcutBakiye += (_bakiye.EklenecekBakiye * decimal.Parse(dovizKur.Replace(".", ",")));
                 MessageBox.Show(_bakiye.MevcutBakiye.ToString());

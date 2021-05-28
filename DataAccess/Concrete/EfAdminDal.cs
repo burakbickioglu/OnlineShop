@@ -6,8 +6,7 @@ using Entities.Concrete;
 
 namespace DataAccess.Concrete
 {
-    public class EfAlimSatimDal : EfRepositoryBase<AlimSatim, OnlineShopContext>, IAlimSatimDal
+    public class EfAdminDal : EfRepositoryBase<Admin, OnlineShopContext> , IAdminDal
     {
-        
     }
 }

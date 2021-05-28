@@ -19,7 +19,11 @@ namespace WindowsFormsApp1
         }
 
         Kullanici kullanici = new Kullanici();
+        Admin admin = new Admin();
+
         KullaniciManager kullaniciManager = new KullaniciManager(new EfKullaniciDal());
+        AdminManager adminManager = new AdminManager(new EfAdminDal());
+
         private void frmKullaniciGiris_Load(object sender, EventArgs e)
         {
         }
@@ -32,23 +36,30 @@ namespace WindowsFormsApp1
 
             // kullanıcının bilgileri doğrulanır
             kullanici = kullaniciManager.UserControl(ad, sifre);
+            admin = adminManager.UserControl(ad, sifre);
+
+
             frmKullanici frmKullanici = new frmKullanici(kullanici);
+            frmAdmin frmAdmin = new frmAdmin(admin);
+
+
 
             // veritabanında admin bulunmadığı için geçici bir kontrol yapıyoruz
-            if (ad == "admin" && sifre == "1234")
+            if (admin != null)
             {
-                frmAdmin fr = new frmAdmin();
-                fr.ShowDialog();
+                frmAdmin.ShowDialog();
             }
             // Kullanıcı bilgisi yanlış ise mesaj döndürüyoruz
-            else if (kullanici == null)
+            else if (kullanici != null)
             {
-                MessageBox.Show("Kullanıcı adı veya şifre yanlış");
+                frmKullanici.ShowDialog();
+
             }
             // Kullanıcı bilgileri doğru ise kullanıcı formunu çağırıyoruz
             else
             {
-                frmKullanici.ShowDialog();
+                MessageBox.Show("Kullanıcı adı veya şifre yanlış");
+
             }
 
 

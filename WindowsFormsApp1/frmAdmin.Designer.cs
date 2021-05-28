@@ -47,9 +47,15 @@ namespace WindowsFormsApp1
             this.lblEklenecekStok = new System.Windows.Forms.Label();
             this.btnStokOnayla = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblAdminKullaniciAd = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblAdminBakiye = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridScreen)).BeginInit();
             this.grpBakiyeOnay.SuspendLayout();
             this.grpStokOnay.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnKullanicilar
@@ -150,7 +156,7 @@ namespace WindowsFormsApp1
             this.grpBakiyeOnay.Controls.Add(this.btnBakiyeOnayla);
             this.grpBakiyeOnay.Controls.Add(this.label1);
             this.grpBakiyeOnay.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpBakiyeOnay.Location = new System.Drawing.Point(144, 389);
+            this.grpBakiyeOnay.Location = new System.Drawing.Point(732, 389);
             this.grpBakiyeOnay.Name = "grpBakiyeOnay";
             this.grpBakiyeOnay.Size = new System.Drawing.Size(410, 168);
             this.grpBakiyeOnay.TabIndex = 5;
@@ -207,7 +213,7 @@ namespace WindowsFormsApp1
             this.grpStokOnay.Controls.Add(this.btnStokOnayla);
             this.grpStokOnay.Controls.Add(this.label3);
             this.grpStokOnay.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpStokOnay.Location = new System.Drawing.Point(144, 389);
+            this.grpStokOnay.Location = new System.Drawing.Point(732, 389);
             this.grpStokOnay.Name = "grpStokOnay";
             this.grpStokOnay.Size = new System.Drawing.Size(410, 168);
             this.grpStokOnay.TabIndex = 7;
@@ -265,12 +271,65 @@ namespace WindowsFormsApp1
             this.label3.TabIndex = 4;
             this.label3.Text = "Eklenecek stok: ";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblAdminBakiye);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.lblAdminKullaniciAd);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Location = new System.Drawing.Point(144, 389);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(342, 165);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Admin Bilgileri";
+            // 
+            // lblAdminKullaniciAd
+            // 
+            this.lblAdminKullaniciAd.AutoSize = true;
+            this.lblAdminKullaniciAd.Location = new System.Drawing.Point(136, 44);
+            this.lblAdminKullaniciAd.Name = "lblAdminKullaniciAd";
+            this.lblAdminKullaniciAd.Size = new System.Drawing.Size(34, 25);
+            this.lblAdminKullaniciAd.TabIndex = 12;
+            this.lblAdminKullaniciAd.Text = "ad";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(6, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 25);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Kullanıcı adı:";
+            // 
+            // lblAdminBakiye
+            // 
+            this.lblAdminBakiye.AutoSize = true;
+            this.lblAdminBakiye.Location = new System.Drawing.Point(136, 69);
+            this.lblAdminBakiye.Name = "lblAdminBakiye";
+            this.lblAdminBakiye.Size = new System.Drawing.Size(34, 25);
+            this.lblAdminBakiye.TabIndex = 14;
+            this.lblAdminBakiye.Text = "ad";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(55, 69);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 25);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Bakiye:";
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1145, 569);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpStokOnay);
             this.Controls.Add(this.grpBakiyeOnay);
             this.Controls.Add(this.DataGridScreen);
@@ -288,6 +347,8 @@ namespace WindowsFormsApp1
             this.grpBakiyeOnay.PerformLayout();
             this.grpStokOnay.ResumeLayout(false);
             this.grpStokOnay.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -312,5 +373,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblKullaniciAdi2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblAdminBakiye;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblAdminKullaniciAd;
+        private System.Windows.Forms.Label label6;
     }
 }

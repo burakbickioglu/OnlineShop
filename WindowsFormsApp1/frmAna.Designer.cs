@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
             this.btnKullaniciGiris.Location = new System.Drawing.Point(89, 189);
             this.btnKullaniciGiris.Name = "btnKullaniciGiris";
             this.btnKullaniciGiris.Size = new System.Drawing.Size(222, 52);
-            this.btnKullaniciGiris.TabIndex = 8;
+            this.btnKullaniciGiris.TabIndex = 1;
             this.btnKullaniciGiris.Text = "Kullanıcı Girişi";
             this.btnKullaniciGiris.UseVisualStyleBackColor = true;
             this.btnKullaniciGiris.Click += new System.EventHandler(this.btnKullaniciGiris_Click);
@@ -62,7 +62,7 @@ namespace WindowsFormsApp1
             this.btnAdminGiris.Location = new System.Drawing.Point(89, 256);
             this.btnAdminGiris.Name = "btnAdminGiris";
             this.btnAdminGiris.Size = new System.Drawing.Size(222, 52);
-            this.btnAdminGiris.TabIndex = 8;
+            this.btnAdminGiris.TabIndex = 2;
             this.btnAdminGiris.Text = "Admin Girişi";
             this.btnAdminGiris.UseVisualStyleBackColor = true;
             this.btnAdminGiris.Click += new System.EventHandler(this.btnAdminGiris_Click);
@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
             this.btnUyeOl.Location = new System.Drawing.Point(89, 323);
             this.btnUyeOl.Name = "btnUyeOl";
             this.btnUyeOl.Size = new System.Drawing.Size(222, 52);
-            this.btnUyeOl.TabIndex = 8;
+            this.btnUyeOl.TabIndex = 3;
             this.btnUyeOl.Text = "Üye Ol";
             this.btnUyeOl.UseVisualStyleBackColor = true;
             this.btnUyeOl.Click += new System.EventHandler(this.btnUyeOl_Click);
