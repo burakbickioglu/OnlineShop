@@ -46,5 +46,10 @@ namespace Business.Concrete
         {
             return _urunDal.Delete(entity);
         }
+
+        public Urun getById(Urun urun)
+        {
+            return _urunDal.Get(p => p.UrunId == urun.UrunId);
+        }
     }
 }

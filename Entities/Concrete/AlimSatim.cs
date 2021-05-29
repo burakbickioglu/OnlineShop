@@ -15,6 +15,8 @@ namespace Entities.Concrete
         public int UrunId { get; set; }
         public int Miktar { get; set; }
         public decimal ToplamFiyat { get; set; }
+        public DateTime Tarih { get; set; }
+        
 
     }
 }

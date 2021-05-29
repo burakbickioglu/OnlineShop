@@ -36,7 +36,7 @@ namespace Alghoritm
 
             // admin bilgisi çekildi
             admin = adminManager.Get(new Admin {AdminId = 1});
-
+            
             // alıcı varsa aşağıdaki if şartına girilir, yok ise algoritma yorulmaz, çıkılır
             if (alicilar.Count != 0)
             {
@@ -73,7 +73,6 @@ namespace Alghoritm
                             // satıcının bakiyesi saticibakiye değişkenine aktarılıyor
                             saticiBakiye = bakiyeManager.Get(new Bakiye { KullaniciId = gecerliIlan.SaticiId });
                             AlimSatim alimSatim = new AlimSatim();
-
                             // eğer alıcının verdiği teklife uygun bir satış emri yok ise 
                             if (mevcutalici.TeklifFiyat < gecerliIlan.BirimFiyat)
                             {
@@ -125,6 +124,7 @@ namespace Alghoritm
                                     alimSatim.SaticiId = gecerliIlan.SaticiId;
                                     alimSatim.UrunId = gecerliIlan.UrunId;
                                     alimSatim.ToplamFiyat = (alinanmiktar * gecerliIlan.BirimFiyat);
+                                    alimSatim.Tarih = DateTime.Today;
                                     alimSatimManager.Add(alimSatim);
 
 
@@ -166,6 +166,7 @@ namespace Alghoritm
                                     alimSatim.SaticiId = gecerliIlan.SaticiId;
                                     alimSatim.UrunId = gecerliIlan.UrunId;
                                     alimSatim.ToplamFiyat = (alinanmiktar * gecerliIlan.BirimFiyat);
+                                    alimSatim.Tarih = DateTime.Today;
                                     alimSatimManager.Add(alimSatim);
 
                                 }

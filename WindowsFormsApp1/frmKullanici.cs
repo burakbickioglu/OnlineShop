@@ -32,13 +32,14 @@ namespace WindowsFormsApp1
         List<Urun> _uruns = new List<Urun>();
         List<UserStockDto> _stok = new List<UserStockDto>();
         List<Stok> _userStok = new List<Stok>();
-        
+
         // ilgili managerler oluşturuluyor
         BakiyeManager bakiyeManager = new BakiyeManager(new EfBakiyeDal());
         UrunManager urunManager = new UrunManager(new EfUrunDal());
         AlisEmirManager alisManager = new AlisEmirManager(new EfAlisEmirDal());
         StokManager stokManager = new StokManager(new EfStokDal());
         IlanManager ilanManager = new IlanManager(new EfIlanDal());
+       
         Alghoritm.Alghoritm algoritma = new Alghoritm.Alghoritm();
 
 
@@ -186,14 +187,10 @@ namespace WindowsFormsApp1
 
         }
 
-        private void materialButton1_Click(object sender, EventArgs e)
+        private void btnRapor_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            frmRapor frmRapor = new frmRapor(_kullanici);
+            frmRapor.ShowDialog();
         }
     }
 }

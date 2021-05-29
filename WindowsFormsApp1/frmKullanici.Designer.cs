@@ -50,7 +50,10 @@ namespace WindowsFormsApp1
             this.btnUrunEkle = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnAlis = new System.Windows.Forms.Button();
+            this.txtBirimTeklif = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.txtAlinacakMiktar = new System.Windows.Forms.TextBox();
             this.cmbAlinacakUrun = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -66,9 +69,7 @@ namespace WindowsFormsApp1
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblhosgeldin = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtBirimTeklif = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btnRapor = new System.Windows.Forms.Button();
             this.grpKullaniciBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -237,6 +238,7 @@ namespace WindowsFormsApp1
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnRapor);
             this.groupBox1.Controls.Add(this.btnDataGridYenile);
             this.groupBox1.Controls.Add(this.btnUrunEkle);
             this.groupBox1.Controls.Add(this.dataGridView1);
@@ -347,6 +349,19 @@ namespace WindowsFormsApp1
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Alış Emri";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.label12.Location = new System.Drawing.Point(66, 108);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 25);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Fiyat:";
+            // 
             // btnAlis
             // 
             this.btnAlis.BackColor = System.Drawing.Color.Transparent;
@@ -363,6 +378,27 @@ namespace WindowsFormsApp1
             this.btnAlis.TabIndex = 4;
             this.btnAlis.UseVisualStyleBackColor = false;
             this.btnAlis.Click += new System.EventHandler(this.btnAlis_Click);
+            // 
+            // txtBirimTeklif
+            // 
+            this.txtBirimTeklif.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBirimTeklif.Location = new System.Drawing.Point(126, 107);
+            this.txtBirimTeklif.Name = "txtBirimTeklif";
+            this.txtBirimTeklif.Size = new System.Drawing.Size(133, 29);
+            this.txtBirimTeklif.TabIndex = 17;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.label13.Location = new System.Drawing.Point(10, 108);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(59, 25);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Birim";
             // 
             // txtAlinacakMiktar
             // 
@@ -540,39 +576,15 @@ namespace WindowsFormsApp1
             this.lblhosgeldin.TabIndex = 22;
             this.lblhosgeldin.Text = "HOŞGELDİN";
             // 
-            // label12
+            // btnRapor
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.label12.Location = new System.Drawing.Point(66, 108);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 25);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "Fiyat:";
-            // 
-            // txtBirimTeklif
-            // 
-            this.txtBirimTeklif.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBirimTeklif.Location = new System.Drawing.Point(126, 107);
-            this.txtBirimTeklif.Name = "txtBirimTeklif";
-            this.txtBirimTeklif.Size = new System.Drawing.Size(133, 29);
-            this.txtBirimTeklif.TabIndex = 17;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.label13.Location = new System.Drawing.Point(10, 108);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 25);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Birim";
+            this.btnRapor.Location = new System.Drawing.Point(781, 34);
+            this.btnRapor.Name = "btnRapor";
+            this.btnRapor.Size = new System.Drawing.Size(146, 52);
+            this.btnRapor.TabIndex = 3;
+            this.btnRapor.Text = "Rapor Al";
+            this.btnRapor.UseVisualStyleBackColor = true;
+            this.btnRapor.Click += new System.EventHandler(this.btnRapor_Click);
             // 
             // frmKullanici
             // 
@@ -580,7 +592,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1263, 620);
+            this.ClientSize = new System.Drawing.Size(1263, 624);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -648,5 +660,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtBirimTeklif;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnRapor;
     }
 }

@@ -7,5 +7,7 @@ namespace Business.Abstract
 {
     public interface IUrunService : IBaseService<Urun>
     {
+        Urun getById(Urun urun);
+
     }
 }
