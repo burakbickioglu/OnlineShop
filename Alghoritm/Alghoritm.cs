@@ -140,6 +140,7 @@ namespace Alghoritm
                                     gecerliIlan.Miktar -= alinanmiktar;
                                     aliciBakiye.MevcutBakiye -= (alinanmiktar * gecerliIlan.BirimFiyat);
                                     aliciBakiye.MevcutBakiye -= (alinanmiktar * gecerliIlan.BirimFiyat) * adminYuzdesi;
+                                    // aracı olan admine komisyon ödemesi işlemi
                                     admin.Bakiye += (alinanmiktar * gecerliIlan.BirimFiyat) * adminYuzdesi;
                                     saticiBakiye.MevcutBakiye += (alinanmiktar * gecerliIlan.BirimFiyat);
                                     aliciStok.UrunMiktar += alinanmiktar;

@@ -121,19 +121,22 @@ namespace WindowsFormsApp1
             // 
             // btnRapor
             // 
+            this.btnRapor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(105)))), ((int)(((byte)(136)))));
+            this.btnRapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRapor.ForeColor = System.Drawing.Color.White;
             this.btnRapor.Location = new System.Drawing.Point(446, 9);
             this.btnRapor.Name = "btnRapor";
             this.btnRapor.Size = new System.Drawing.Size(105, 105);
             this.btnRapor.TabIndex = 6;
             this.btnRapor.Text = "Çıktı Al";
-            this.btnRapor.UseVisualStyleBackColor = true;
+            this.btnRapor.UseVisualStyleBackColor = false;
             this.btnRapor.Click += new System.EventHandler(this.btnRapor_Click);
             // 
             // frmRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(168)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(562, 126);
             this.Controls.Add(this.btnRapor);
             this.Controls.Add(this.label2);
@@ -144,7 +147,7 @@ namespace WindowsFormsApp1
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Name = "frmRapor";
             this.Text = "Rapor Sayfası";
-            this.Load += new System.EventHandler(this.frmRapor_Load);
+            //this.Load += new System.EventHandler(this.frmRapor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

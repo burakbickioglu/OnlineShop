@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
 
         void dovizDoldur()
         {
-            //alınacak ürün doldurma
+            // comboboxa döviz türlerinin doldurulması
 
             _doviz = _dovizManager.GetAll();
             foreach (var doviz in _doviz)

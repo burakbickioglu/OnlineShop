@@ -188,6 +188,19 @@
         pvA34F/Bk2AbmAP1MtBGW8tY1jou0cQbwv8BZbf/6Q5qwoEAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="btnRapor.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAGxSURBVGhD7ZhdSsNQEIXz4gbUNKiI6F7VFaiJP6sQXwVdSUGaWF2CDzW5nDJ6ewZuSqbpLfeD
+        7yHNmTszkFKaLBEzTTVZbFK0HR7WzFK0HR7zBiAtEkpapCdpkVDSIj1Ji4SSFulJWqRjUWV7dVVctwdM
+        lwdtsdO6LK66mTG+gCVY0dZaV/klxhfaG7UfjMAZxhdIKAoxvsBCMYjxBRYa3TJ//nwozue3xUVzX7yw
+        DMYXWGhsZzf7pxgvqx+PzlgGtwUWGtuPu4MTjJd1S7EMbgssNLrto/X9dHjcLRT1oxUixhdYKAYxvsBC
+        MYjxBRaKQYwvsFAMYnyBhWIQ4wsspIkSM1hPTZQILKSJEjNYT02UCCykiRIzWE9NlAgspIkSR1NO3lmm
+        p284zkHuq6JEYCFNlDgGWOSnqfJXHOcgGVWUCCykiRIzWE9NlAjth40f0kSJGayn4upf3T4vH1DiWPPR
+        +ved8CF5Kn358Od10Jdf4IsSxxqLrHwnfEiN71x9HRTC8iBcmmHeZ6cXsfwdweXwsAaWvyO4HB7zBiAt
+        EsrOLbIp0XZ4WDNL0TYRIVn2C1K6tK13ZpsnAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnDataGridYenile.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAIUlJREFUeF7t

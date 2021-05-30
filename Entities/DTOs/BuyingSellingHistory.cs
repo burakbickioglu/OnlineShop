@@ -7,7 +7,8 @@ using Entities.Abstract;
 namespace Entities.DTOs
 {
     public class BuyingSellingHistory : IDto
-    {
+    { 
+        // bu dto sınıfında kullanıcının geçmiş alışverişini tutuyor, kullanıcıya raporluyoruz
         public string AliciAdi { get; set; }
         public string SaticiAdi { get; set; }
         public string UrunAdi { get; set; }
