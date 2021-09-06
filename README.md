@@ -8,20 +8,3 @@ If a brief explanation is required;
 ### Entities Layer
 * The entities corresponding to the tables in the database are stored in this layer.  
     
-## User Interface 
-![Image of userInterface](https://i.resmim.net/i/userinterface.png)
-
-## Admin Interface
-* **Users**  
-  
-![Users](https://i.resmim.net/i/userinterface-1.png)
-
-* **Balance Confirmation** 
-  
-![Users](https://i.resimyukle.xyz/zc1QRL.png)
-
-* **Stock Confirmation**  
-  
-![Users](https://i.resimyukle.xyz/zc1QRL.png)
-
-
